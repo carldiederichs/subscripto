@@ -20,7 +20,9 @@
     </div>
   </div>
   <div class='button-box'>
-    <button class='btn btn-primary' type="submit" id='button'>Get Started</button>
+    <%= link_to subscriptions_path do %>
+      <button class='btn btn-primary' type="submit" id='button'>Get Started</button>
+    <% end %>
   </div>
 </header>
 
