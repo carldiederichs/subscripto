@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-require 'plaid'
 
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
@@ -11,13 +10,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  def create
-    super
-    client = Plaid::Client.new(env: :sandbox,
-                               client_id: PLAID_CLIENT_ID,
-                               secret: PLAID_SECRET,
-                               public_key: PLAID_PUBLIC_KEY)
-  end
+  # def create
+  #   super
+  # end
 
   # GET /resource/edit
   # def edit

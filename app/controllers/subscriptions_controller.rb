@@ -1,11 +1,16 @@
 class SubscriptionsController < ApplicationController
-    def index
+  require 'plaid'
+  def index
     @subscriptions = Subscription.all
     @company = Company.new
     @subscription = Subscription.new
-
+    @client = Plaid::Client.new(env: :sandbox,
+                               client_id: ENV['PLAID_CLIENT_ID'],
+                               secret: ENV['PLAID_SECRET'],
+                               public_key: ENV['PLAID_PUBLIC_KEY'])
     end
-
+    @client
+    raise
   def show
     @subscription = Subscription.find(params[:id])
   end
