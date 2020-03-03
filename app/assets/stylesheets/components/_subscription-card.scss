@@ -1,0 +1,59 @@
+.subscription-card {
+  background-color: white;
+  height: 120px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  overflow: hidden;
+  margin: 10px 50px;
+  justify-content: space-between;
+  border-radius: 7px;
+  position: relative;
+}
+
+.subscription-card-header {
+  height: 45px;
+  border-bottom: lightgrey solid 1px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius-top: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  align-items:center;
+}
+
+.btn-primary {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 30px;
+  font-size: 11px;
+}
+
+.subscription-card-description {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  font-size: 14px;
+}
+
+.company-logo {
+  border: lightgrey solid 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.subscription-title {
+  margin-right: 740px;
+  font-size: 20px;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+}
