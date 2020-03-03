@@ -16,13 +16,15 @@
 
 .showcase {
   position: absolute;
-  top: 330px;
-  left: 200px;
+  top: 40%;
+  left: 40%;
+  color: black;
 }
 
 .text {
   width: 200px;
   text-align: center;
+
 }
 
 .title {
@@ -34,7 +36,6 @@
   max-width: 960px;
   margin: auto;
   overflow: hidden;
-  padding: 50px;
 }
 
 .grid-3 {
@@ -44,11 +45,14 @@
 }
 
 .content {
-  height: 160px;
+  height: 200px;
   align-items: center;
 }
 
 #button {
-  margin-right: 68px;
+}
+
+.white-text {
+  color: white;
 }
 
