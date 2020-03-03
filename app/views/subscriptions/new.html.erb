@@ -1,0 +1,29 @@
+<div class="container">
+  <h1></h1>
+  <!-- Large modal -->
+<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><i class="fas fa-plus"></i></button>
+
+  <div class="modal fade" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add a New Subscription</h2>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <%= simple_form_for @subscription do |f| %>
+              <%= f.input :title %>
+              <%= f.input :price %>
+              <%= f.input :creation_date %>
+              <%= f.input :renewal_date %>
+            <% end %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
