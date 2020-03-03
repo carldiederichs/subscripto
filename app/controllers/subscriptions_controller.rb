@@ -1,7 +1,9 @@
 class SubscriptionsController < ApplicationController
     def index
-    @subscription = Subscription.all
+    @subscriptions = Subscription.all
     @company = Company.new
+    @subscription = Subscription.new
+
     end
 
   def show
@@ -15,7 +17,9 @@ class SubscriptionsController < ApplicationController
   def create
     @subscription = Subscription.new(subscription_params)
     @subscription.user = current_user
-    if  @subscription.save
+    # hack
+    @subscription.company = Company.first
+    if @subscription.save
       redirect_to subscriptions_path
     else
       render :new
@@ -40,7 +44,7 @@ class SubscriptionsController < ApplicationController
 
   private
 
-  def subscriptions_params
+  def subscription_params
     params.require(:subscription).permit(:title, :price, :creation_date, :renewal_date)
   end
 end
