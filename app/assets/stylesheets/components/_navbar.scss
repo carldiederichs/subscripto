@@ -1,55 +1,116 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-}
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-.navbar-lewagon .navbar-brand img {
-  width: 55px;
-}
-
-.home_navbar_style {
-  position: absolute;
-}
-
-.not_home_navbar_style {
-  background-color: #484848 !important;
-  box-shadow: 0 0 15px rgba(0,0,0,0.8);
-}
-
-#navbar {
-  width: auto;
-  background-color: transparent;
-  color: #484848;
+.navbar {
+  display: flex;
   width: 100%;
+  height: 1px;
+  position: absolute;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: white;
-  font-size: 17px;
-  border-bottom: 2px solid transparent;
-  &:hover {
-    color: white;
-    border-bottom: 2px solid white;
+.underline-menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+  list-style-type: none;
 
+  &:hover {
+    li:not(:hover) a {
+      opacity: 0.2;
+    }
+  }
+
+  li {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      height: 2px;
+      background: #3498db;
+      transform: scaleX(0);
+      transition: 0.4s-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &:hover,
+    &.active {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    .nav-item {
+      position: relative;
+      display: flex;
+      padding: 30px 25px 30px 25px;
+      line-height: 1;
+      text-decoration: none;
+      color: white;
+      transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
   }
 }
 
-.nav-item {
- space-around: 100px;
-
+a.nav-link {
+  color: white;
+  font-size: 17px;
 }
 
-.navbar-brand {
-  height: 50px;
-  width: auto;
-  margin-bottom: 15px;
-}
 
-.nav-link {
-  padding: 20px;
-}
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   background: white;
+//   z-index: 1;
+//   position: absolute;
+//   top: 0;
+// }
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+// .navbar-lewagon .navbar-brand img {
+//   width: 55px;
+// }
+
+// .home_navbar_style {
+//   position: absolute;
+// }
+
+// .not_home_navbar_style {
+//   background-color: #484848 !important;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.8);
+// }
+
+// #navbar {
+//   width: auto;
+//   background-color: transparent;
+//   color: #484848;
+//   width: 100%;
+// }
+
+// .navbar-light .navbar-nav .nav-link {
+//   color: white;
+//   font-size: 17px;
+//   border-bottom: 2px solid transparent;
+//   &:hover {
+//     color: white;
+//     border-bottom: 2px solid white;
+
+//   }
+// }
+
+// .nav-item {
+//  space-around: 100px;
+
+// }
+
+// .navbar-brand {
+//   height: 50px;
+//   width: auto;
+//   margin-bottom: 15px;
+// }
+
+// .nav-link {
+//   padding: 20px;
+// }
