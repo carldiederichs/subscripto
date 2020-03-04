@@ -12,9 +12,11 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
+  <% link_to subscriptions_path do %>
   <div class="form-actions">
     <%= f.button :submit, "Log in" %>
   </div>
+  <% end %>
 <% end %>
 
 <%= render "devise/shared/links" %>
