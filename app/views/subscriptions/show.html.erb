@@ -1,1 +1,19 @@
+    <div class="subscription-card">
 
+      <div class="subscription-card-header">
+        <div class="company-logo">
+        </div>
+        <div class="subscription-title">
+          <p><%= @subscription.title %></p>
+        </div>
+        <p><%= @subscription.renewal_date %></p>
+        <p>$<%= @subscription.price %></p>
+      </div>
+      <div class='subscription-card-body'>
+      </div>
+      <div class="subscription-card-footer">
+        <%= link_to "https://accounts.spotify.com/en/login/?_locale=en-GB&continue=https:%2F%2Fwww.spotify.com%2Fuk%2Faccount%2Foverview%2F%3F_ga%3D2.20821233.859511256.1583325910-2004956868.1579960316", target: "_blank" do %>
+          <button>cancel</button>
+        <% end %>
+      </div>
+    </div>

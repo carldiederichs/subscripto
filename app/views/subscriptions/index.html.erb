@@ -26,6 +26,7 @@
                 <%= simple_form_for @subscription do |f| %>
                   <%= f.input :title %>
                   <%= f.input :price %>
+                  <%= f.input :description %>
                   <%= f.input :creation_date %>
                   <%= f.input :renewal_date %>
                   <%= f.button :submit, class: "btn btn-warning" %>
@@ -52,14 +53,12 @@
         <p><%= subscription.renewal_date %></p>
         <p>$<%= subscription.price %></p>
       </div>
-
+      <div class='subscription-card-body'>
+      </div>
       <div class="subscription-card-footer">
-        <div class="subscription-card-description">
-          <p><%= subscription.company.description %></p>
-        </div>
-        <div>
-
-        </div>
+        <%= link_to subscription_path(subscription) do %>
+          <button>manage</button>
+        <% end %>
       </div>
     </div>
   <% end %>
