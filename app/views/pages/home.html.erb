@@ -3,63 +3,55 @@
 
 <!---------- Nav-Bar ---------->
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon " id="navbar">
+  <div class="navbar" id="navbar">
     <%= link_to :root, class: 'navbar-brand' do %>
-    <h1 class="white-text">S</h1>
-  <% end %>
-  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-    <span class='navbar-toggler-icon'></span>
-  </button>
-  <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-    <ul class='navbar-nav mr-auto'>
-      <li class='nav-item'>
-        <%= link_to 'Help', '#', class: 'nav-link' %>
-      </li>
-      <% if current_user.nil? %>
+      <h1 class="white-text">S</h1>
+    <% end %>
+      <ul class='underline-menu'>
         <li class='nav-item'>
-          <%= link_to 'Sign up', root_path, class: 'nav-link' %>
+          <%= link_to 'Help', '#', class: 'nav-link' %>
         </li>
-        <li class='nav-item'>
-          <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
-        </li>
-      <% else %>
-        <li class='nav-item'>
-          <%= link_to 'My Bookings', root_path, class: 'nav-link' %>
-        </li>
-        <li class='nav-item'>
-          <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-        </li>
-      <% end %>
-    </ul>
+        <% if current_user.nil? %>
+          <li class='nav-item'>
+            <%= link_to 'Sign up', root_path, class: 'nav-link' %>
+          </li>
+          <li class='nav-item'>
+            <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
+          </li>
+        <% else %>
+          <li class='nav-item'>
+            <%= link_to 'My Bookings', root_path, class: 'nav-link' %>
+          </li>
+          <li class='nav-item'>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+          </li>
+        <% end %>
+      </ul>
   </div>
-</div>
 
 <!---------- Banner Image ---------->
 
-<div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1516342243255-ac2202f9f149?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
+  <div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1516342243255-ac2202f9f149?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
 
 
 <!---------- Header ---------->
 
-<header class="showcase">
-  <div class="content">
-    <img src="logo.png" class="logo" alt="">
-    <div class="title">
-      Welcome to Subscripto
+  <header class="showcase">
+    <div class="content">
+      <img src="logo.png" class="logo" alt="">
+      <div class="title">
+        Welcome to Subscripto
+      </div>
+      <div class="text">
+        Manage your subscriptions with ease!
+      </div>
     </div>
-    <div class="text">
-      Manage your subscriptions with ease!
+    <div class='button-box'>
+      <%= link_to subscriptions_path do %>
+        <button class='btn btn-primary' type="submit" id='button-homepage'>Get Started</button>
+      <% end %>
     </div>
-  </div>
-  <div class='button-box'>
-    <%= link_to subscriptions_path do %>
-      <button class='btn btn-primary' type="submit" id='button'>Get Started</button>
-    <% end %>
-  </div>
-</header>
-
-
-
+  </header>
 
 <!---------- End of Banner Image ---------->
 
@@ -105,7 +97,7 @@
 
 <!---------- End of Home Page ---------->
 
-</div>
+<!-- </div> -->
 
 
 
@@ -115,4 +107,4 @@
   <p>Subscripto &copy; 2020</p>
 </footer> -->
 
-</div>
+<!-- </div> -->
