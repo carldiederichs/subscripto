@@ -3,12 +3,14 @@
 <div class="dashboard-container">
   <div class="total-and-add">
     <div class="dashboard-total">
+
       <% subscriptions = Subscription.all %>
       <% price_array = subscriptions.map do |s| %>
       <% s.price %>
       <% end %>
       <% total = price_array.sum %>
       <%= "Total: $#{total}" %>
+
     </div>
     <div class="cards-container">
   <!-- Large modal -->
@@ -51,7 +53,7 @@
 
       <div class="subscription-card-header">
         <div class="company-logo">
-          <img src="https://logo.clearbit.com/<%= subscription.title %>.com">
+          <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first %>.com">
         </div>
         <div class="subscription-title">
           <p><%= subscription.title %></p>
