@@ -13,7 +13,7 @@
   <div class='subscription-card-body'>
   </div>
   <div class="subscription-card-footer">
-    <%= link_to "https://accounts.spotify.com/en/login/?_locale=en-GB&continue=https:%2F%2Fwww.spotify.com%2Fuk%2Faccount%2Foverview%2F%3F_ga%3D2.20821233.859511256.1583325910-2004956868.1579960316", target: "_blank" do %>
+    <%= link_to "https://#{@subscription.title.split(' ').first}.com", target: "_blank" do %>
       <button type="button" class="btn" data-toggle="modal" data-target="#cancelModal">cancel</button>
     <% end %>
   </div>
