@@ -16,9 +16,10 @@ class SubscriptionsController < ApplicationController
 
   def create
     @subscription = Subscription.new(subscription_params)
+    @company = Company.new
     @subscription.user = current_user
     # hack
-    @subscription.company = Company.first
+    @subscription.company = @company
     if @subscription.save
       redirect_to subscriptions_path
     else
