@@ -6,7 +6,7 @@
 
       <% subscriptions = Subscription.all %>
       <% price_array = subscriptions.map do |s| %>
-      <% s.price %>
+        <% s.price %>
       <% end %>
       <% total = price_array.sum %>
       <%= "Total: $#{total}" %>
