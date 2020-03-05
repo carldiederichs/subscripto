@@ -1,8 +1,9 @@
+<div class="container-of-containers">
 <div class="container" id="container">
   <div class="form-container sign-up-container">
-    <form action="#">
-      <h1>Sign up</h1>
-      <div class="social-container">
+    <div class="form">
+      <h1>Register Now</h1>
+      <div class="social-container" class="form">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
@@ -30,14 +31,14 @@
   <div class="form-actions">
     <%= f.button :submit, "Sign up", class: "button" %>
   </div>
-</form>
+  </div>
   <% end %>
   </div>
 
 
   <div class="form-container sign-in-container">
-    <form action="#">
-      <h1>Sign in</h1>
+    <div class="form">
+      <h1>Welcome back!</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -61,8 +62,8 @@
   <div class="form-actions">
     <%= f.button :submit, "Log in", class: "button" %>
   </div>
-<% end %>
-    </form>
+  <% end %>
+    </div>
   </div>
   <div class="overlay-container">
     <div class="overlay">
@@ -78,4 +79,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
