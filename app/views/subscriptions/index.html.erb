@@ -13,12 +13,13 @@
         <% s.price %>
       <% end %>
       <% total = price_array.sum %>
-      <%= "Total: £#{total.round(2)}" %>
+
+      <%= "Next Month Bill: $#{total.round(2)}" %>
 
     </div>
-    <div class="cards-container">
-  <!-- Large modal -->
 
+  <!-- Large modal -->
+    <div class="cards-container">
       <button type="button" class="btn" data-toggle="modal" data-target="#myModal"><i class="fas fa-plus"></i></button>
 
       <div class="modal fade" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -61,8 +62,20 @@
         <div class="subscription-title">
           <p><%= subscription.title %></p>
         </div>
-        <p><%= subscription.renewal_date %></p>
-        <p>$<%= subscription.price %></p>
+        <div class="total-money-spent">
+            <% date1 = subscription.creation_date %>
+            <% date2 = Date.today %>
+            <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+           <p>Total Spent: £ <%= all_time_total = months * subscription.price %> </p>
+        </div>
+        <div class="total-time-subscribed">
+            <% date1 = subscription.creation_date %>
+            <% date2 = Date.today %>
+            <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+            <p> Time:<%= months / 12 %> Years <%= months % 12 %> Months </p>
+        </div>
+        <p>Price: £<%= subscription.price %></p>
+        <p>Renewal: <%= subscription.renewal_date %></p>
       </div>
       <div class='subscription-card-body'>
       </div>
