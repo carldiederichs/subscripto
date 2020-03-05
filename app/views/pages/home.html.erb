@@ -3,7 +3,7 @@
 
 <!---------- Nav-Bar ---------->
 
-  <div class="navbar" id="navbar">
+  <div class="home-navbar" id="navbar">
     <%= link_to :root, class: 'navbar-brand' do %>
       <h1 class="white-text">S</h1>
     <% end %>
@@ -40,18 +40,23 @@
     <div class="content">
       <img src="logo.png" class="logo" alt="">
       <div class="title">
-        Welcome to Subscripto
+        Welcome to <strong>Subscripto</strong>
       </div>
-      <div class="text">
-        Manage your subscriptions with ease!
+      <div class="welcome-text-container">
+        <div class="text" id="welcome-text">
       </div>
-    </div>
+      </div>
     <div class='button-box'>
       <%= link_to subscriptions_path do %>
         <button class='btn btn-primary' type="submit" id='button-homepage'>Get Started</button>
       <% end %>
     </div>
+    </div>
   </header>
+
+  <footer class="center">
+  <p>Subscripto &copy; 2020</p>
+  </footer>
 
 <!---------- End of Banner Image ---------->
 
@@ -103,8 +108,8 @@
 
 <!---------- Footer ---------->
 
-<footer class="center">
+<!-- <footer class="center">
   <p>Subscripto &copy; 2020</p>
-</footer>
+</footer> -->
 
 <!-- </div> -->
