@@ -33,7 +33,6 @@
                 <%= simple_form_for @subscription do |f| %>
                   <%= f.input :title %>
                   <%= f.input :price %>
-                  <%= f.input :description %>
                   <%= f.input :creation_date %>
                   <%= f.input :renewal_date %>
                   <%= f.button :submit, class: "btn btn-warning" %>
@@ -62,7 +61,6 @@
         <p>$<%= subscription.price %></p>
       </div>
       <div class='subscription-card-body'>
-        <p><%= subscription.description %></p>
       </div>
       <div class="subscription-card-footer">
         <%= link_to subscription_path(subscription) do %>
