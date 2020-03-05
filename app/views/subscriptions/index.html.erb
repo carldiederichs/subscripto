@@ -9,7 +9,7 @@
         <% s.price %>
       <% end %>
       <% total = price_array.sum %>
-      <%= "Total: $#{total.round(2)}" %>
+      <%= "Total: £#{total.round(2)}" %>
 
     </div>
     <div class="cards-container">
@@ -53,7 +53,7 @@
 
       <div class="subscription-card-header">
         <div class="company-logo">
-          <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first %>.com">
+          <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com">
         </div>
         <div class="subscription-title">
           <p><%= subscription.title %></p>
