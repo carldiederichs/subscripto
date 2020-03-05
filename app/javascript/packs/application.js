@@ -24,14 +24,14 @@ if (signInButton) {
 
 
 //start of js code for navbar on homepage
-// let underlineMenuItems = document.querySelectorAll(".underline-menu li");
-// console.log(underlineMenuItems)
-// underlineMenuItems[0].classList.add("active");
-// underlineMenuItems.forEach(item => {
-//   item.addEventListener("click", () => {
-//     underlineMenuItems.forEach(item => item.classList.remove("active"));
-//     item.classList.add("active");
-//   });
-// });
+let underlineMenuItems = document.querySelectorAll(".underline-menu li");
+console.log(underlineMenuItems)
+underlineMenuItems[0].classList.add("active");
+underlineMenuItems.forEach(item => {
+  item.addEventListener("click", () => {
+    underlineMenuItems.forEach(item => item.classList.remove("active"));
+    item.classList.add("active");
+  });
+});
 //end of js code for navbar on homepage
 
