@@ -1,10 +1,9 @@
 class SubscriptionsController < ApplicationController
-    def index
+  def index
     @subscriptions = Subscription.all
     @company = Company.new
     @subscription = Subscription.new
-
-    end
+  end
 
   def show
     @subscription = Subscription.find(params[:id])

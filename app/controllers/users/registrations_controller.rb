@@ -13,6 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   # def create
   #   super
+
   #   client = Plaid::Client.new(env: :sandbox,
   #                              client_id: PLAID_CLIENT_ID,
   #                              secret: PLAID_SECRET,
