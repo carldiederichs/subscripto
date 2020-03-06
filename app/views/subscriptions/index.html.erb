@@ -1,6 +1,14 @@
 <h1><%= @access_token %></h1>
+<%= link_to root_path do %>
+  <button>Home</button>
+<% end %>
 
 <h1>Your Subscriptions</h1>
+
+ <div style="height: 400px; width: 70%">
+    <canvas id="myChart"></canvas>
+  </div>
+
 
 <div class="dashboard-container">
   <div class="total-and-add">
@@ -85,11 +93,9 @@
     </div>
   <% end %>
 
-  <div style="height: 400px; width: 70%">
-    <canvas id="myChart"></canvas>
-  </div>
     <script>
     </script>
+
 </div>
 
 
