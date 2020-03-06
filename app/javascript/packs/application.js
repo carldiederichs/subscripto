@@ -90,12 +90,12 @@ if (chart) {
 
 // typed script for the welcome text on home page
 
-var typed = new Typed('#welcome-text', {
-  strings: ["Manage your subscriptions with ease!", "Stop wasting money, sign up to Subscripto!", "Did you know: 13% of Americans currently spend over 300 dollars on subscriptions per year!"],
-  typeSpeed: 20,
-  fadeOut: true,
-  loop: true,
-  shuffle: true,
-  showCursor: false,
-});
+// var typed = new Typed('#welcome-text', {
+//   strings: ["Manage your subscriptions with ease!", "Stop wasting money, sign up to Subscripto!", "Did you know: 13% of Americans currently spend over 300 dollars on subscriptions per year!"],
+//   typeSpeed: 20,
+//   fadeOut: true,
+//   loop: true,
+//   shuffle: true,
+//   showCursor: false,
+// });
 
