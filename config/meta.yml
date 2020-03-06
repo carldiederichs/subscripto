@@ -1,0 +1,5 @@
+meta_product_name: "Subscripto"
+meta_title: "Subscripto - Manage Subscriptions with ease"
+meta_description: "Here at Subscripto we help you manage your subscriptions "
+meta_image: "subscripto.png" # should exist in `app/assets/images/`
+twitter_account: "@subscripto"
