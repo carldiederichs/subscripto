@@ -1,50 +1,55 @@
-<%= link_to root_path do %>
-  <button>Home</button>
-<% end %>
+<div class="whole-show-background">
+  <%= link_to root_path do %>
+    <button>Home</button>
+  <% end %>
 
-<%= link_to subscriptions_path do %>
-  <button>My Subscriptions</button>
-<% end %>
+  <%= link_to subscriptions_path do %>
+    <button>My Subscriptions</button>
+  <% end %>
 
-<div class="subscription-card">
+  <div class="show-card">
 
-  <div class="subscription-card-header">
-    <div class="company-logo">
-      <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first %>.com">
+    <div class="show-card-header">
+      <div class="show-card-title">
+        <h2><%= @subscription.title %></h2>
+      </div>
+      <p><%= @subscription.renewal_date %></p>
+      <p>$<%= @subscription.price %></p>
     </div>
-    <div class="subscription-title">
-      <p><%= @subscription.title %></p>
+    <div class='show-card-body'>
+      <div class="show-company-logo">
+        <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first %>.com">
+      </div>
+      <div class="show-card-body-text">
+        dfnskndfnjsdjfngknnsdfkg
+      </div>
     </div>
-    <p><%= @subscription.renewal_date %></p>
-    <p>$<%= @subscription.price %></p>
+    <div class="show-card-footer">
+      <%= link_to "https://#{@subscription.title.split(' ').first}.com", target: "_blank" do %>
+        <button type="button" class="btn" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+      <% end %>
+    </div>
   </div>
-  <div class='subscription-card-body'>
-  </div>
-  <div class="subscription-card-footer">
-    <%= link_to "https://#{@subscription.title.split(' ').first}.com", target: "_blank" do %>
-      <button type="button" class="btn" data-toggle="modal" data-target="#cancelModal">cancel</button>
-    <% end %>
-  </div>
-</div>
 
-<div class="modal fade" id='cancelModal' role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal fade" id='cancelModal' role="dialog" aria-labelledby="myLargeModalLabel">
 
-        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-lg" role="document">
 
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2>Did you manage to cancel your <%= @subscription.title %> subscription</h2>
-            </div>
-            <div class="modal-body">
-              <%= link_to subscriptions_path do %>
-                <button>no</button>
-              <% end %>
-              <%= link_to subscription_path(@subscription), method: :delete do %>
-                <button>yes</button>
-              <% end %>
-            </div>
-            <div class="modal-footer">
-            </div>
-          </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Did you manage to cancel your <%= @subscription.title %> subscription</h2>
+        </div>
+        <div class="modal-body">
+          <%= link_to subscriptions_path do %>
+            <button>no</button>
+          <% end %>
+          <%= link_to subscription_path(@subscription), method: :delete do %>
+            <button>yes</button>
+          <% end %>
+        </div>
+        <div class="modal-footer">
         </div>
       </div>
+    </div>
+  </div>
+</div>
