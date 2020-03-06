@@ -56,15 +56,15 @@ import Chart from 'chart.js';
 const chart = document.getElementById('myChart')
 
 if (chart) {
-  const ctx = chart.getContext('2d');
-
+  let ctx = chart.getContext('2d');
+  ctx.height = 420;
   let myChart = new Chart(ctx, {
       type: 'line',
       data: {
           labels: [ 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'],
           datasets: [{
               label: 'Subscription Cost (per month)',
-              data: [78, 68, 85, 85, 85, 76, 86, 86, 89, 89, 78, 95],
+              data: [78, 68, 85, 85, 85, 76, 86, 86, 89, 89, 78, 95, 110],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -100,3 +100,16 @@ if (chart) {
 }
 
 
+
+
+// typed script for the welcome text on home page
+if (document.getElementById('welcome-text') != null) {
+  var typed = new Typed('#welcome-text', {
+    strings: ["Manage your subscriptions with ease!", "Stop wasting money, sign up to Subscripto!", "Did you know: 13% of Americans currently spend over 300 dollars on subscriptions per year!"],
+    typeSpeed: 20,
+    fadeOut: true,
+    loop: true,
+    shuffle: true,
+    showCursor: false,
+  });
+}

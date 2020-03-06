@@ -1,14 +1,104 @@
 .subscription-card {
-  background-color: white;
-  height: 120px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
   overflow: hidden;
-  margin: 10px 50px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  //   background-color: white;
+  // height: 120px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // overflow: hidden;
+  margin: 0 0 36px 0;
+  // border-radius: 7px;
+  position: relative;
+  padding: 10px;
+  // width: 98%;
+}
+
+.card-trip-pricing {
+  position: absolute;
+  right: 16px;
+  top: 15px;
+  font-size: 16px;
+}
+
+.subscription-card-info {
+  overflow: hidden;
+  background: white;
+  padding: 10px;
+}
+
+.subscription-card-info h2 {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  left: 70px;
+  top: 20px;
+}
+
+.subscription-card-info p {
+  font-size: 12px;
+  opacity: .7;
+  bottom: 10px;
+  left: 10px;
+  padding: 0px;
+  margin: 30px;
+}
+
+
+.subscription-card-infos {
+  padding: 16px;
+  display: flex;
   justify-content: space-between;
-  border-radius: 7px;
+  align-items: flex-end;
   position: relative;
 }
+
+.card-trip-user {
+  position: absolute;
+  left: 16px;
+  top: 5px;
+  width: 40px;
+}
+
+.manage-button {
+  position: absolute;
+  right: 16px;
+  bottom: 15px;
+}
+
+
+// .subscription-card h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 10px;
+// }
+
+// .subscription-card p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 10px;
+// }
+
+// .subscription-card-info {
+//    padding: 16px;
+//   display: flex;
+//   align-items: flex-start;
+//   bottom: 0px;
+//   position: relative;
+// }
+
+// .card-trip-user {
+//   position: absolute;
+//   width: 40px;
+//   top: 584px;
+//   // margin: 10px;
+// }
+
+// .card-trip-pricing {
+//   position: absolute;
+//   // top: 10px;
+//   right: 180px;
+//   margin: 30px;
+// }
 
 .subscription-card-header {
   height: 45px;
@@ -51,9 +141,3 @@
   font-size: 20px;
 }
 
-.company-logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-
-}

@@ -1,3 +1,8 @@
+.index-container {
+  max-width: 1140px;
+  margin: 0 auto;
 
-// Import page-specific CSS files here.
-@import "home";
+  .chart-container {
+    height: 420px;
+  }
+}
