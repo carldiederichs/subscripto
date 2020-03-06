@@ -1,9 +1,10 @@
-.total-and-add {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 50px;
-  margin-top: 30px;
-}
+// .total-and-add {
+//   display: flex;
+//   justify-content: space-between;
+//   margin: 0px 50px;
+//   margin-top: 30px;
+//   margin-left: 395px;
+// }
 
 .btn-dashboard {
   height: 35px;
@@ -19,5 +20,28 @@
   padding: 4px 15px;
   align-items: center;
   height: 55px;
+  display: flex;
+  align-items: center;
 }
 
+.subscriptions-chart {
+  display: flex;
+  align-items: flex-end;
+}
+
+.subscriptions-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px -20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+}
+
+.total-billing {
+  margin-left: 30px;
+}
