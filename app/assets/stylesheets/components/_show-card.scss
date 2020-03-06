@@ -1,0 +1,92 @@
+.whole-show-background {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-card {
+  background-color: white;
+  height: 60%;
+  width: 1300px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+}
+
+.show-card-header {
+  height: 150px;
+  border-bottom: #e7e7e7 solid 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius-top: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  align-items:center;
+  h2 {
+    font-size: 65px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+.show-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex: 1;
+  img {
+    height: 240px;
+  }
+}
+
+.show-card-body-text {
+  width: 60%;
+}
+
+.show-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#button-manage-show {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 30px;
+  font-size: 11px;
+}
+
+.show-card-description {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  font-size: 14px;
+}
+
+// .show-company-logo {
+//   border: lightgrey solid 1px;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   align-items: center;
+//   margin-bottom: 15px;
+// }
+
+.show-card-title {
+  margin-right: 740px;
+  font-size: 20px;
+}
+
