@@ -3,7 +3,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "bootstrap";
-import Typed from 'typed.js'
+// import Typed from 'typed.js'
 
 //start of js code for signup page
 const signUpButton = document.getElementById('signUp');
