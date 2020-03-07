@@ -8,7 +8,7 @@ import Typed from 'typed.js'
 // typed script for the welcome text on home page
 if (document.getElementById("welcome-text") != null) {
   var typed = new Typed('#welcome-text', {
-    strings: ["Manage your subscriptions with ease!", "Stop wasting money, sign up to Subscripto!", "Did you know: 13% of Americans currently spend over 300 dollars on subscriptions per year!"],
+    strings: ["Manage your subscriptions with ease!"],
     typeSpeed: 20,
     fadeOut: true,
     loop: true,
