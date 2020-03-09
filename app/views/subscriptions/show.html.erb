@@ -2,10 +2,10 @@
 <%# content_for :meta_title, "#{@offer.name} is on #{DEFAULT_META["meta_product_name"]}" %>
 <%# content_for :meta_description, @offer.description %>
 <%# content_for :meta_image, cl_image_path(@offer.photo.path) %>
-
+<div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);">
   <div class="home-navbar" id="navbar">
     <%= link_to :root, class: 'navbar-brand' do %>
-      <h1 class="white-text">S</h1>
+      <%= image_tag "logo-resize-2", class: "subscripto-logo" %>
     <% end %>
       <ul class='underline-menu'>
         <li class='nav-item'>
@@ -32,48 +32,52 @@
       </ul>
   </div>
 
-<div class="whole-show-background">
+  <div class="whole-show-background">
 
-  <div class="show-card">
-    <div class="show-card-header">
-      <div>
-        <h2><%= @subscription.title %></h2>
-      </div>
-      <p>Renewal Date: <%= @subscription.renewal_date %></p>
-      <p>Creation Date: <%= @subscription.creation_date %></p>
-    </div>
-    <div class='show-card-body'>
-      <div class="show-company-logo">
-        <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first %>.com">
-      </div>
-      <div class="show-card-body-text">
-        <p>Price Per Month: £<%= @subscription.price %></p>
-      </div>
-    </div>
-    <div class="show-card-footer">
-      <%= link_to "https://#{@subscription.title.split(' ').first}.com", target: "_blank" do %>
-        <button type="button" class="btn" data-toggle="modal" data-target="#cancelModal">Cancel</button>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="modal fade" id='cancelModal' role="dialog" aria-labelledby="myLargeModalLabel">
-
-    <div class="modal-dialog modal-lg" role="document">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>Did you manage to cancel your <%= @subscription.title %> subscription</h2>
+    <div class="show-card">
+      <div class="show-card-header">
+        <div class="show-card-title">
+            <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first %>.com" class="show-title-logo">
+          <h2><%= @subscription.title %></h2>
         </div>
-        <div class="modal-body">
-          <%= link_to subscriptions_path do %>
-            <button>no</button>
-          <% end %>
-          <%= link_to subscription_path(@subscription), method: :delete do %>
-            <button>yes</button>
-          <% end %>
+        <p>Renewal Date: <%= @subscription.renewal_date %></p>
+      </div>
+      <div class='show-card-body'>
+        <div class="show-card-body-text">
+          <p>Price Per Month: £<%= @subscription.price %></p>
+          <p>Creation Date: <%= @subscription.creation_date %></p>
+          <p>Time Subscribed: </p>
+          <p>Total Spent: </p>
         </div>
-        <div class="modal-footer">
+      </div>
+      <div class="show-card-footer">
+        <%= link_to subscriptions_path do %>
+          <button class="btn btn-default" class="back-button">back</button>
+        <% end %>
+        <%= link_to "https://#{@subscription.title.split(' ').first}.com", target: "_blank" do %>
+          <button type="button" class="btn btn-danger" class="show-cancel-button" data-toggle="modal" data-target="#cancelModal">Cancel Subscription</button>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="modal fade" id='cancelModal' role="dialog" aria-labelledby="myLargeModalLabel">
+
+      <div class="modal-dialog modal-lg" role="document">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Did you manage to cancel your <%= @subscription.title %> subscription</h2>
+          </div>
+          <div class="modal-body">
+            <%= link_to subscription_path(@subscription) do %>
+              <button>no</button>
+            <% end %>
+            <%= link_to subscription_path(@subscription), method: :delete do %>
+              <button>yes</button>
+            <% end %>
+          </div>
+          <div class="modal-footer">
+          </div>
         </div>
       </div>
     </div>

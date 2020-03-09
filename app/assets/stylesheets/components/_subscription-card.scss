@@ -6,10 +6,10 @@
   // height: 120px;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // overflow: hidden;
-  margin: 0 0 36px 0;
+  margin: 0px 0 10px 0;
   // border-radius: 7px;
   position: relative;
-  padding: 10px;
+  border-radius: 7px;
   // width: 98%;
 }
 
@@ -21,35 +21,43 @@
 }
 
 .subscription-card-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   overflow: hidden;
   background: white;
   padding: 10px;
+  p {
+    margin: 10px 0;
+    color: #234B8B;
+  }
+  // h2 {
+  //   margin: 10px 0;
+  // }
 }
 
-.subscription-card-info h2 {
-  font-size: 16px;
-  font-weight: bold;
-  position: absolute;
-  left: 70px;
-  top: 20px;
-}
+// .subscription-card-info h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   position: absolute;
+//   left: 70px;
+//   top: 20px;
+// }
 
 .subscription-card-info p {
-  font-size: 12px;
-  opacity: .7;
-  bottom: 10px;
-  left: 10px;
-  padding: 0px;
-  margin: 30px;
+//   font-size: 12px;
+//   opacity: .7;
+//   bottom: 10px;
+  // left: 10px;
+// padding: 0px;
 }
 
 
-.subscription-card-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+.subscription-card-info {
+  // padding: 16px;
+  // display: flex;
+  // flex-direction: column;
+  // position: relative;
 }
 
 .card-trip-user {
@@ -64,41 +72,6 @@
   right: 16px;
   bottom: 15px;
 }
-
-
-// .subscription-card h2 {
-//   font-size: 16px;
-//   font-weight: bold;
-//   margin: 10px;
-// }
-
-// .subscription-card p {
-//   font-size: 12px;
-//   opacity: .7;
-//   margin: 10px;
-// }
-
-// .subscription-card-info {
-//    padding: 16px;
-//   display: flex;
-//   align-items: flex-start;
-//   bottom: 0px;
-//   position: relative;
-// }
-
-// .card-trip-user {
-//   position: absolute;
-//   width: 40px;
-//   top: 584px;
-//   // margin: 10px;
-// }
-
-// .card-trip-pricing {
-//   position: absolute;
-//   // top: 10px;
-//   right: 180px;
-//   margin: 30px;
-// }
 
 .subscription-card-header {
   height: 45px;
@@ -140,4 +113,41 @@
   margin-right: 740px;
   font-size: 20px;
 }
+
+
+
+
+// .subscription-card h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 10px;
+// }
+
+// .subscription-card p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 10px;
+// }
+
+// .subscription-card-info {
+//    padding: 16px;
+//   display: flex;
+//   align-items: flex-start;
+//   bottom: 0px;
+//   position: relative;
+// }
+
+// .card-trip-user {
+//   position: absolute;
+//   width: 40px;
+//   top: 584px;
+//   // margin: 10px;
+// }
+
+// .card-trip-pricing {
+//   position: absolute;
+//   // top: 10px;
+//   right: 180px;
+//   margin: 30px;
+// }
 

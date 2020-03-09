@@ -1,10 +1,23 @@
-// .total-and-add {
-//   display: flex;
-//   justify-content: space-between;
-//   margin: 0px 50px;
-//   margin-top: 30px;
-//   margin-left: 395px;
-// }
+.dashboard-page {
+  background-color: white;
+  height: 100vh;
+}
+
+.index-container {
+  width: 100%;
+  max-width: 70%;
+  // 1140px;
+  margin: 0px auto;
+}
+
+.chart-container {
+  height: auto;
+  margin: 50px auto 0 auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+}
+
 
 .btn-dashboard {
   height: 35px;
@@ -12,28 +25,40 @@
   align-items: center;
 }
 
-.dashboard-total {
-  font-size: 16px;
-  background-color: red;
-  color: white;
-  border-radius: 7px;
-  padding: 4px 15px;
-  align-items: center;
-  height: 55px;
+// .dashboard-total {
+//   font-size: 16px;
+//   background-color: red;
+//   color: white;
+//   border-radius: 7px;
+//   padding: 4px 15px;
+//   align-items: center;
+//   height: 55px;
+//   display: flex;
+//   align-items: center;
+// }
+
+
+.section-title {
+  border-bottom: solid 1px grey;
+  margin: 20px 0;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  color: #234B8B;
 }
 
-.subscriptions-chart {
-  display: flex;
-  align-items: flex-end;
+.add-subscription-btn {
+  color: #234B8B;
+}
+
+.user-subs {
+  padding: 40px 0;
 }
 
 .subscriptions-box {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  margin: 10px -20px;
+  padding: 10px 0;
+  margin: 10px 0;
 }
 
 .dashboard-header {
@@ -49,3 +74,34 @@
 .whole-dashboard-background {
   background-color: #16243b;
  }
+
+ .activity-sidebar{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+ }
+
+ .dashboard-container {
+  display: flex;
+ }
+
+ .price-average {
+  color: #234B8B;
+ }
+
+ .top-subscriptions {
+  color: #234B8B;
+ }
+
+ // .total-and-add {
+//   display: flex;
+//   justify-content: space-between;
+//   margin: 0px 50px;
+//   margin-top: 30px;
+//   margin-left: 395px;
+// }
+
+// .subscriptions-chart {
+//   display: flex;
+//   align-items: flex-end;
+// }
