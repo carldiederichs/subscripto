@@ -1,7 +1,6 @@
 .whole-show-background {
   height: 100vh;
   width: 100%;
-  background-color: #16243b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,58 +9,78 @@
 
 .show-card {
   background-color: white;
-  height: 60%;
-  width: 1300px;
+  height: 50%;
+  width: 800px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 20px;
   position: relative;
 }
 
 .show-card-header {
-  height: 150px;
-  border-bottom: #e7e7e7 solid 5px;
+  height: 75px;
+  border-bottom: #e7e7e7 solid 1px;
   overflow: hidden;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  border-radius-top: 7px;
+  border-radius-top: 3px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
   align-items:center;
   h2 {
-    font-size: 50px;
+    font-size: 25px;
+    margin: 0;
   }
   p {
-    font-size: 20px;
+    font-size: 14px;
+    margin: 0;
   }
 }
+
+.show-card-title {
+  display: flex;
+  align-items: center;
+
+}
+
+.show-title-logo {
+  height: 70px;
+}
+
 
 .show-card-body {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
   flex: 1;
   img {
-    height: 240px;
+    height: 80px;
   }
   p {
-    font-size: 25px;
+    font-size: 14px;
   }
 }
 
-.show-card-body-text {
-  width: 60%;
+.show-cancel-button {
+  border-radius: 25px;
 }
+
+// .show-card-body-text {
+//   width: 80%;
+// }
 
 .show-card-footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin: 0px 20px;
+  button.btn.btn-danger {
+    border-radius: 20px;
+  }
 }
 
 #button-manage-show {
@@ -72,15 +91,19 @@
   font-size: 11px;
 }
 
-.show-card-description {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  font-size: 14px;
-}
+// .show-card-description {
+//   position: absolute;
+//   bottom: 0;
+//   left: 20px;
+//   font-size: 14px;
+// }
 
 .nav-buttons {
   display: flex;
+}
+
+.back-button {
+  margin: 6px 18px;
 }
 
 // .show-company-logo {
