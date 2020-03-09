@@ -8,7 +8,7 @@ import Typed from 'typed.js'
 // typed script for the welcome text on home page
 if (document.getElementById("welcome-text") != null) {
   var typed = new Typed('#welcome-text', {
-    strings: ["Manage your subscriptions with ease!"],
+    strings: ["Manage your subscriptions with ease!", "Stop wasting money, sign up to Subscripto!"],
     typeSpeed: 20,
     fadeOut: true,
     loop: true,
@@ -64,31 +64,22 @@ if (chart) {
           labels: [ 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'],
           datasets: [{
               label: 'Subscription Cost (per month)',
+              fill: false,
               data: [78, 68, 85, 85, 85, 76, 86, 86, 89, 89, 78, 95, 110],
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)'
-              ],
-              borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
+              borderColor: 'rgba(143, 128, 240, 1)',
+              pointBorderColor: 'rgba(143, 128, 240, 1)',
+              backgroundColor: 'rgba(143, 128, 240, 1)',
+              borderWidth: 2
           }]
       },
       options: {
           responsive: true,
           maintainAspectRatio: false,
           scales: {
-              yAxes: [{
+              xAxes: [{
+                gridLines: {
+                    display: false,
+                  },
                   ticks: {
                       beginAtZero: true,
                   }
@@ -97,19 +88,4 @@ if (chart) {
       }
   });
 
-}
-
-
-
-
-// typed script for the welcome text on home page
-if (document.getElementById('welcome-text') != null) {
-  var typed = new Typed('#welcome-text', {
-    strings: ["Manage your subscriptions with ease!", "Stop wasting money, sign up to Subscripto!", "Did you know: 13% of Americans currently spend over 300 dollars on subscriptions per year!"],
-    typeSpeed: 20,
-    fadeOut: true,
-    loop: true,
-    shuffle: true,
-    showCursor: false,
-  });
 }
