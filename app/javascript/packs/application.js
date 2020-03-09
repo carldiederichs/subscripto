@@ -6,16 +6,6 @@ import "bootstrap";
 import Typed from 'typed.js'
 
 // typed script for the welcome text on home page
-if (document.getElementById("welcome-text") != null) {
-  var typed = new Typed('#welcome-text', {
-    strings: ["Manage your subscriptions with ease!"],
-    typeSpeed: 20,
-    fadeOut: true,
-    loop: true,
-    shuffle: true,
-    showCursor: false,
-  });
-};
 
 
 //start of js code for signup page
