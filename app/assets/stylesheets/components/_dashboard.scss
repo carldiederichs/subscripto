@@ -1,10 +1,17 @@
-// .total-and-add {
-//   display: flex;
-//   justify-content: space-between;
-//   margin: 0px 50px;
-//   margin-top: 30px;
-//   margin-left: 395px;
-// }
+.index-container {
+  width: 100%;
+  max-width: 70%;
+  // 1140px;
+  margin: 0 auto;
+}
+
+
+  .chart-container {
+    height: 420px;
+    border-top: solid 1px grey;
+    margin: 10px 0;
+    padding: 10px 0;
+}
 
 .btn-dashboard {
   height: 35px;
@@ -12,28 +19,28 @@
   align-items: center;
 }
 
-.dashboard-total {
-  font-size: 16px;
-  background-color: red;
-  color: white;
-  border-radius: 7px;
-  padding: 4px 15px;
-  align-items: center;
-  height: 55px;
-  display: flex;
-  align-items: center;
-}
+// .dashboard-total {
+//   font-size: 16px;
+//   background-color: red;
+//   color: white;
+//   border-radius: 7px;
+//   padding: 4px 15px;
+//   align-items: center;
+//   height: 55px;
+//   display: flex;
+//   align-items: center;
+// }
 
-.subscriptions-chart {
-  display: flex;
-  align-items: flex-end;
+.user-subs {
+  padding: 40px 0;
 }
 
 .subscriptions-box {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  margin: 10px -20px;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: solid 1px grey;
 }
 
 .dashboard-header {
@@ -49,3 +56,26 @@
 .whole-dashboard-background {
   background-color: #16243b;
  }
+
+ .activity-sidebar{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+ }
+
+ .dashboard-container {
+  display: flex;
+ }
+
+ // .total-and-add {
+//   display: flex;
+//   justify-content: space-between;
+//   margin: 0px 50px;
+//   margin-top: 30px;
+//   margin-left: 395px;
+// }
+
+// .subscriptions-chart {
+//   display: flex;
+//   align-items: flex-end;
+// }
