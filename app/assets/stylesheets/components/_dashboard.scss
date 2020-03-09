@@ -2,15 +2,12 @@
   width: 100%;
   max-width: 70%;
   // 1140px;
-  margin: 0 auto;
+  margin: -30px auto;
 }
 
 
   .chart-container {
     height: 420px;
-    border-top: solid 1px grey;
-    margin: 10px 0;
-    padding: 10px 0;
 }
 
 .btn-dashboard {
@@ -31,6 +28,12 @@
 //   align-items: center;
 // }
 
+
+.section-title {
+  border-bottom: solid 1px grey;
+  margin: 20px 0;
+}
+
 .user-subs {
   padding: 40px 0;
 }
@@ -40,7 +43,6 @@
   flex-direction: column;
   padding: 10px 0;
   margin: 10px 0;
-  border-top: solid 1px grey;
 }
 
 .dashboard-header {

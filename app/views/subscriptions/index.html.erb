@@ -26,7 +26,7 @@
 
       <div class="index-container">
         <div class="chart-container" style="width: 800px; margin: 0 auto;">
-          <h5>My Activity</h5>
+          <div class="section-title"><h5>My Activity</h5></div>
           <canvas id="myChart"></canvas>
           <div class="total-billing">
             <% subscriptions = Subscription.all %>
@@ -72,7 +72,7 @@
       </div>
       <div class="user-subs" style="margin: 30px;">
         <div class="subscriptions-box" style="width: 800px; margin: 0 auto;">
-          <h5>My Subscriptions</h5>
+          <div class="section-title"><h5>My Subscriptions</h5></div>
           <% @subscriptions.each do |subscription| %>
             <div class="subscription-card">
               <div class="subscription-card-info">
