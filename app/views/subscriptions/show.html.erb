@@ -3,30 +3,51 @@
 <%# content_for :meta_description, @offer.description %>
 <%# content_for :meta_image, cl_image_path(@offer.photo.path) %>
 
-<div class="whole-show-background">
-  <%= link_to root_path do %>
-    <button>Home</button>
-  <% end %>
+  <div class="home-navbar" id="navbar">
+    <%= link_to :root, class: 'navbar-brand' do %>
+      <h1 class="white-text">S</h1>
+    <% end %>
+      <ul class='underline-menu'>
+        <li class='nav-item'>
+          <%= link_to 'Help', root_path, class: 'nav-link'%>
+        </li>
+        <li class='nav-item'>
+          <%= link_to 'Scan My Account', transactions_path, class: 'nav-link'%>
+        </li>
+        <% if current_user.nil? %>
+          <li class='nav-item'>
+            <%= link_to 'Sign up', '/users/sign_up', class: 'nav-link' %>
+          </li>
+          <li class='nav-item'>
+            <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
+          </li>
+        <% else %>
+          <li class='nav-item'>
+            <%= link_to 'My Subscriptions', subscriptions_path, class: 'nav-link' %>
+          </li>
+          <li class='nav-item'>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+          </li>
+        <% end %>
+      </ul>
+  </div>
 
-  <%= link_to subscriptions_path do %>
-    <button>My Subscriptions</button>
-  <% end %>
+<div class="whole-show-background">
 
   <div class="show-card">
-
     <div class="show-card-header">
-      <div class="show-card-title">
+      <div>
         <h2><%= @subscription.title %></h2>
       </div>
-      <p><%= @subscription.renewal_date %></p>
-      <p>$<%= @subscription.price %></p>
+      <p>Renewal Date: <%= @subscription.renewal_date %></p>
+      <p>Creation Date: <%= @subscription.creation_date %></p>
     </div>
     <div class='show-card-body'>
       <div class="show-company-logo">
         <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first %>.com">
       </div>
       <div class="show-card-body-text">
-        dfnskndfnjsdjfngknnsdfkg
+        <p>Price Per Month: £<%= @subscription.price %></p>
       </div>
     </div>
     <div class="show-card-footer">
@@ -58,3 +79,4 @@
     </div>
   </div>
 </div>
+
