@@ -35,9 +35,7 @@
 
  <div class="total-billing">
           <% subscriptions = Subscription.all %>
-          <% price_array = subscriptions.map do |s| %>
-          <% s.price %>
-          <% end %>
+          <% price_array = subscriptions.map(&:price).reject(&:blank?) %>
           <% total = price_array.sum %>
           <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
   </div>
