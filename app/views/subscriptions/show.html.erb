@@ -57,7 +57,7 @@
           <button class="btn btn-secondary back-button">Back</button>
         <% end %>
         <%= link_to "https://#{@subscription.title.split(' ').first}.com", target: "_blank" do %>
-          <button type="button" class="btn btn-danger show-cancel-button" data-toggle="modal" data-target="#cancelModal">Cancel Subscription</button>
+          <button type="button" class="btn show-cancel-button" data-toggle="modal" data-target="#cancelModal">Cancel Subscription</button>
         <% end %>
       </div>
     </div>

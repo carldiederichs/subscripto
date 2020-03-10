@@ -31,7 +31,18 @@
     </ul>
   </div>
 
-<!------- Dashboard Contents ---------->
+<!------- Fun Facts ---------->
+
+ <div class="total-billing">
+          <% subscriptions = Subscription.all %>
+          <% price_array = subscriptions.map do |s| %>
+          <% s.price %>
+          <% end %>
+          <% total = price_array.sum %>
+          <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
+  </div>
+
+  <!------- Dashboard Contents ---------->
 
   <div class="dashboard-container">
     <div class="chart-container" style="width: 800px; margin: 40px auto 0 auto;">
@@ -50,17 +61,8 @@
           <div>PRICE</div>
         </div>
 
-        <div class="total-billing">
-          <% subscriptions = Subscription.all %>
-          <% price_array = subscriptions.map do |s| %>
-          <% s.price %>
-          <% end %>
-          <% total = price_array.sum %>
-          <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
-        </div>
-
         <% @subscriptions.each do |subscription| %>
-          <%= link_to subscription_path(subscription), style: 'text-decoration: none;' do %>
+          <%= link_to subscription_path(subscription), style: 'text-decoration: none; margin: 0;' do %>
             <div class="subscription-card zoom">
               <div>
                 <% result = subscription.renewal_date - Date.today %>

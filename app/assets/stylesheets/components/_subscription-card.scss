@@ -1,12 +1,19 @@
+.subscriptions-box {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
 .subscription-card {
   display: flex;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 0px 0 10px 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  margin: 0px 0 5px 0;
   position: relative;
   border-radius: 7px;
   transition: transform .5s ease;
+  height: 65px;
 }
 
 .card-trip-pricing {
@@ -88,17 +95,17 @@
 
 .red-status {
   background-color: red;
-  height: 50px;
+  height: 100%;
   width: 10px;
 }
 .yellow-status {
   background-color: yellow;
-  height: 50px;
+  height: 100%;
   width: 10px;
 }
 .green-status {
   background-color: green;
-  height: 50px;
+  height: 100%;
   width: 10px;
 }
 
