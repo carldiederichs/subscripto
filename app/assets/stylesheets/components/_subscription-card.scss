@@ -11,6 +11,7 @@
   position: relative;
   border-radius: 7px;
   // width: 98%;
+  transition: transform .5s ease;
 }
 
 .card-trip-pricing {
@@ -114,7 +115,9 @@
   font-size: 20px;
 }
 
-
+.zoom:hover {
+  transform: scale(1.03);
+}
 
 
 // .subscription-card h2 {

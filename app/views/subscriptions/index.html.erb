@@ -100,24 +100,23 @@
             <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription <i class="fas fa-plus"></i></button>
           </div>
           <% @subscriptions.each do |subscription| %>
-          <div class="subscription-card">
-            <div class="subscription-card-info">
-              <h2><%= subscription.title %></h2>
-              <% date1 = subscription.creation_date %>
-              <% date2 = Date.today %>
-              <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-              <p>Total Spent: £ <%= all_time_total = months * subscription.price %> </p>
-              <% date1 = subscription.creation_date %>
-              <% date2 = Date.today %>
-              <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-              <p> Time:<%= months / 12 %> Years <%= months % 12 %> Months </p>
-            </div>
-            <h2 class="card-trip-pricing">Price: £<%= subscription.price %></h2>
-            <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
-            <button class="manage-button">
-              <%= link_to 'Manage', subscription_path(subscription) %>
-            </button>
-          </div>
+            <%= link_to subscription_path(subscription), style: 'text-decoration: none;' do %>
+              <div class="subscription-card zoom">
+                <div class="subscription-card-info">
+                  <h2><%= subscription.title %></h2>
+                  <%# date1 = subscription.creation_date %>
+                  <%# date2 = Date.today %>
+                  <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+                  <!-- <p>Total Spent: £ <%#= all_time_total = months * subscription.price %> </p> -->
+                  <%# date1 = subscription.creation_date %>
+                  <%# date2 = Date.today %>
+                  <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+                  <!-- <p> Time:<%#= months / 12 %> Years <%#= months % 12 %> Months </p> -->
+                <h2 class="card-trip-pricing">Price: £<%= subscription.price %></h2>
+                </div>
+                <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
+              </div>
+            <% end %>
           <% end %>
         </div>
       </div>
