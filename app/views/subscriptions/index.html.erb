@@ -40,36 +40,27 @@
           <% s.price %>
           <% end %>
           <% total = price_array.sum %>
-          <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
+          <strong>Next Month Bill: </strong>$<%=total.round(2)%>
         </div>
 
         <div class="fact-item">
           <% if @subscriptions.count == 0 %>
             <p></p>
           <% else %>
+          <strong>Oldest Subscription: </strong>
             <%= @subscriptions.order(creation_date: :asc).first.title %>
             <%= @subscriptions.order(creation_date: :asc).first.creation_date %>
           <% end %>
         </div>
 
-
-    <div class="fact-item" class="total-billing">
-      <% subscriptions = Subscription.all %>
-      <% price_array = subscriptions.map do |s| %>
-      <% s.price %>
-      <% end %>
-      <% total = price_array.compact.sum %>
-      <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
-    </div>
-
     <div class="fact-item">
-      <p>Average Monthly Spend: £85.30</p>
+      <p><strong>Average Monthly Spend: </strong> £85.30</p>
     </div>
   </div>
 
 
 
-      <div class="chart-container" style="width: 800px; margin: 40px auto 0 auto;">
+      <div class="chart-container" style="width: 800px;">
         <div class="section-title"><h5>My Activity</h5></div>
         <canvas id="myChart"></canvas>
       </div>
@@ -78,7 +69,7 @@
     <!------- End of graph (fun-facts-and-graph-container) ---------->
 
 
-    <div class="subscriptions-box" style="width: 800px; margin: 0 auto;">
+    <div class="subscriptions-container" style="width: 800px;">
       <div class="section-title"><h5>My Subscriptions (<%=  @subscriptions.count %>)</h5>
         <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription <i class="fas fa-plus"></i></button>
       </div>

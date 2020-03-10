@@ -7,11 +7,15 @@
 }
 
 .chart-container {
-  height: auto;
-  padding: 20px;
+  height: 485px;
+  padding: 20px 20px;
   border-radius: 8px;
-  box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
-  margin: 40px 20px 20px;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+  margin: 0 20px;
+}
+
+#myChart {
+  padding: 50px 50px;
 }
 
 .btn-dashboard {
@@ -22,7 +26,7 @@
 
 .section-title {
   border-bottom: solid 1px grey;
-  margin: 20px 0;
+  // margin: 20px 0;
   display: flex;
   justify-content: space-between;
   color: black;

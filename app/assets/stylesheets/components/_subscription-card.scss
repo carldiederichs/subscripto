@@ -1,7 +1,9 @@
-.subscriptions-box {
-    padding: 20px;
+.subscriptions-container {
+    padding: 30px 30px;
     border-radius: 8px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 20px;
+    height: 630px;
 }
 
 .subscription-card {
@@ -21,6 +23,7 @@
   right: 16px;
   top: 15px;
   font-size: 16px;
+  color: black;
 }
 
 .subscription-card-info {
@@ -30,6 +33,7 @@
   overflow: hidden;
   background: white;
   padding: 10px;
+  color: black;
   p {
     margin: 10px 0;
     color: #234B8B;
@@ -99,7 +103,7 @@
   width: 10px;
 }
 .yellow-status {
-  background-color: yellow;
+  background-color: #fce114;
   height: 100%;
   width: 10px;
 }
@@ -112,5 +116,6 @@
 .subscriptions-table-category-names {
   display: flex;
   justify-content: space-between;
+  margin: 20px 0;
 }
 
