@@ -1,4 +1,5 @@
 .subscription-card {
+  display: flex;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -119,38 +120,19 @@
   transform: scale(1.03);
 }
 
-
-// .subscription-card h2 {
-//   font-size: 16px;
-//   font-weight: bold;
-//   margin: 10px;
-// }
-
-// .subscription-card p {
-//   font-size: 12px;
-//   opacity: .7;
-//   margin: 10px;
-// }
-
-// .subscription-card-info {
-//    padding: 16px;
-//   display: flex;
-//   align-items: flex-start;
-//   bottom: 0px;
-//   position: relative;
-// }
-
-// .card-trip-user {
-//   position: absolute;
-//   width: 40px;
-//   top: 584px;
-//   // margin: 10px;
-// }
-
-// .card-trip-pricing {
-//   position: absolute;
-//   // top: 10px;
-//   right: 180px;
-//   margin: 30px;
-// }
+.red-status {
+  background-color: red;
+  height: 50px;
+  width: 10px;
+}
+.yellow-status {
+  background-color: yellow;
+  height: 50px;
+  width: 10px;
+}
+.green-status {
+  background-color: green;
+  height: 50px;
+  width: 10px;
+}
 
