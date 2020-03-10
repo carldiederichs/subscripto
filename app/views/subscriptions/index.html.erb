@@ -40,7 +40,7 @@
       <% price_array = subscriptions.map do |s| %>
       <% s.price %>
       <% end %>
-      <% total = price_array.sum %>
+      <% total = price_array.compact.sum %>
       <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
     </div>
 
