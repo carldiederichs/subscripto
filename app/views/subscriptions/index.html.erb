@@ -44,9 +44,13 @@
         </div>
 
         <div class="fact-item">
+          <% if @subscriptions.count == 0 %>
+            <p></p>
+          <% else %>
           <strong>Oldest Subscription: </strong>
-          <p> <%= @subscriptions.order(creation_date: :asc).first.title %> from
-          <%= @subscriptions.order(creation_date: :asc).first.creation_date %> </p>
+            <%= @subscriptions.order(creation_date: :asc).first.title %>
+            <%= @subscriptions.order(creation_date: :asc).first.creation_date %>
+          <% end %>
         </div>
 
     <div class="fact-item">
