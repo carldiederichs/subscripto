@@ -47,27 +47,32 @@
 
 }
 
-.show-title-logo {
-  height: 70px;
+.show-card-body-logo {
+  height: 160px;
+  width: 160px;
+  margin-left: 140px;
 }
 
 
 .show-card-body {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
   flex: 1;
-  img {
-    height: 80px;
-  }
   p {
     font-size: 14px;
   }
 }
 
+.show-card-body-text {
+  height: 150px;
+  width: 340px;
+}
+
 .show-cancel-button {
   border-radius: 25px;
+  margin: 6px 18px;
 }
 
 // .show-card-body-text {
@@ -104,6 +109,7 @@
 
 .back-button {
   margin: 6px 18px;
+  border-radius: 25px;
 }
 
 // .show-company-logo {
