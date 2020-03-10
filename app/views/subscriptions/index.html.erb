@@ -33,12 +33,28 @@
 
 <!------- Fun Facts ---------->
 
- <div class="total-billing">
-          <% subscriptions = Subscription.all %>
-          <% price_array = subscriptions.map(&:price).reject(&:blank?) %>
-          <% total = price_array.sum %>
-          <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
+  <div class="fun-facts">
+
+    <div class="fact-item" class="total-billing">
+      <% subscriptions = Subscription.all %>
+      <% price_array = subscriptions.map do |s| %>
+      <% s.price %>
+      <% end %>
+      <% total = price_array.sum %>
+      <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
+    </div>
+
+    <div class="fact-item">
+      <%= @subscriptions.order(creation_date: :asc).first.title %>
+      <%= @subscriptions.order(creation_date: :asc).first.creation_date %>
+    </div>
+
+    <div class="fact-item">
+      <p>Average Monthly Spend: £85.30</p>
+    </div>
   </div>
+
+
 
   <!------- Dashboard Contents ---------->
 
@@ -74,7 +90,7 @@
                <% end %>
               </div>
               <div class="subscription-card-info">
-                <h2><%= subscription.title %></h2>
+                <h2><%= subscription.title.capitalize %></h2>
                 <%# date1 = subscription.creation_date %>
                 <%# date2 = Date.today %>
                 <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
