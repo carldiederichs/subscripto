@@ -32,54 +32,24 @@
 
 
 
-    <div class="dashboard-container">
-      <div class="">
-        <div class="chart-container" style="width: 800px; margin: 40px auto 0 auto;">
+  <div class="dashboard-container">
+    <div>
+      <div class="chart-container" style="width: 800px; margin: 40px auto 0 auto;">
 
-          <div class="section-title"><h5>My Activity</h5></div>
-          <canvas id="myChart"></canvas>
-          <div class="total-billing">
-            <% subscriptions = Subscription.all %>
-            <% price_array = subscriptions.map do |s| %>
-            <% s.price %>
-            <% end %>
-            <% total = price_array.sum %>
-            <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
-            <div>
-            </div>
+        <div class="section-title"><h5>My Activity</h5></div>
+        <canvas id="myChart"></canvas>
+        <div class="total-billing">
+          <% subscriptions = Subscription.all %>
+          <% price_array = subscriptions.map do |s| %>
+          <% s.price %>
+          <% end %>
+          <% total = price_array.sum %>
+          <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
+          <div>
           </div>
+        </div>
+      </div>
 
-          <!-- Large modal -->
-          <div class="cards-container">
-            <div class="modal fade" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="d-flex justify-content-center">
-                      <h2>Add Subscription</h2>
-                    </div>
-                    <div class="d-flex justify-content-right">
-                      <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="subscription-container">
-                        <%= simple_form_for Subscription.new do |f| %>
-                        <%= f.input :title %>
-                        <%= f.input :price %>
-                        <%= f.input :creation_date %>
-                        <%= f.input :renewal_date %>
-                        <%= f.button :submit, class: "btn btn-warning" %>
-                        <% end %>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
         <div class="activity-sidebar">
           <div class="price-average">
             <h5><strong>How much you said?</strong></h5>
@@ -120,9 +90,38 @@
           <% end %>
         </div>
       </div>
-
-
     </div>
+  </div>
+</div>
 
+<!-- Large modal -->
+          <div class="cards-container">
+            <div class="modal fade" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div>
+                      <h2>Add Subscription</h2>
+                    </div>
+                    <div>
+                      <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
+                    </div>
+                  </div>
+                  <div class="modal-body">
+                    <div class="subscription-container">
+                      <%= simple_form_for Subscription.new do |f| %>
+                      <%= f.input :title %>
+                      <%= f.input :price %>
+                      <%= f.input :creation_date %>
+                      <%= f.input :renewal_date %>
+                      <%= f.button :submit, class: "btn btn-primary" %>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- Large modal -->
 
 
