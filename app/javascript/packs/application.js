@@ -66,9 +66,9 @@ if (chart) {
               label: 'Subscription Cost (per month)',
               fill: false,
               data: [78, 68, 85, 85, 85, 76, 86, 86, 89, 89, 78, 95, 110],
-              borderColor: 'rgba(143, 128, 240, 1)',
-              pointBorderColor: 'rgba(143, 128, 240, 1)',
-              backgroundColor: 'rgba(143, 128, 240, 1)',
+              borderColor: 'rgba(95, 132, 185, 1)',
+              pointBorderColor: 'rgba(95, 132, 185, 1)',
+              backgroundColor: 'rgba(95, 132, 185, 1)',
               borderWidth: 2
           }]
       },
