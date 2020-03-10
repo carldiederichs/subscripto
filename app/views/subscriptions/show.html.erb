@@ -5,7 +5,7 @@
 <div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=3300&q=80);">
   <div class="home-navbar" id="navbar">
     <%= link_to :root, class: 'navbar-brand' do %>
-      <%= image_tag "logo-resize-2", class: "subscripto-logo" %>
+      <%= image_tag "logo-resize-2.png", class: "subscripto-logo" %>
     <% end %>
       <ul class='underline-menu'>
         <li class='nav-item'>
@@ -42,9 +42,7 @@
         <p>Renewal Date: <%= @subscription.renewal_date %></p>
       </div>
       <div class='show-card-body'>
-        <div class='show-card-body-logo'>
-          <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first %>.com" class="show-title-logo">
-        </div>
+        <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first %>.com" class="show-title-logo">
         <div class="show-card-body-text">
           <p>Price Per Month: £<%= @subscription.price %></p>
           <p>Creation Date: <%= @subscription.creation_date %></p>
@@ -54,10 +52,11 @@
       </div>
       <div class="show-card-footer">
         <%= link_to subscriptions_path do %>
-          <button class="btn btn-secondary back-button">Back</button>
+          <button class="btn back-button">Back</button>
         <% end %>
         <%= link_to "https://#{@subscription.title.split(' ').first}.com", target: "_blank" do %>
-          <button type="button" class="btn show-cancel-button" data-toggle="modal" data-target="#cancelModal">Cancel Subscription</button>
+          <button type="button" class="btn btn-outline-primary show-cancel-button" data-toggle="modal" data-target="#cancelModal">Cancel Subscription</button>
+
         <% end %>
       </div>
     </div>

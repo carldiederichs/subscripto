@@ -9,15 +9,20 @@
 
 .show-card {
   background-color: white;
-  height: 50%;
-  width: 800px;
+  height: 70%;
+  width: 25%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   overflow: hidden;
   border-radius: 20px;
   position: relative;
+}
+
+.show-title-logo{
+  width: 160px;
+  height: 160px;
 }
 
 .show-card-header {
@@ -47,22 +52,28 @@
 
 }
 
-.show-title-logo {
+// .show-card-body-logo {
+//   height: 160px;
+//   width: 160px;
+// }
 
-}
+// .show-title-logo {
 
-.show-card-body-logo {
-  height: 160px;
-  width: 160px;
-  margin-left: 140px;
-}
+// }
+
+// .show-card-body-logo {
+//   height: 160px;
+//   width: 160px;
+//   margin-left: 140px;
+// }
+
 
 
 .show-card-body {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: center;
+  flex-direction: column;
   flex: 1;
   p {
     font-size: 14px;
@@ -71,12 +82,18 @@
 
 .show-card-body-text {
   height: 150px;
-  width: 340px;
+  width: 70%;
+  margin-top: 55px;
+  p {
+    text-align: center;
+  }
 }
 
 .show-cancel-button {
   border-radius: 25px;
-  margin: 6px 18px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  // color: #4b74b0;
 }
 
 // .show-card-body-text {
@@ -85,7 +102,9 @@
 
 .show-card-footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0px 20px;
   button.btn.btn-danger {
     border-radius: 20px;

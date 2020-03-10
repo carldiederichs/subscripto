@@ -3,7 +3,7 @@
  <!----------- Navbar ------------>
   <div class="index-navbar" id="navbar">
     <%= link_to :root, class: 'navbar-brand' do %>
-    <%= image_tag "logo-resize-2", class: "subscripto-logo" %>
+    <%= image_tag "logo-resize-2.png", class: "subscripto-logo" %>
     <% end %>
     <ul class='underline-menu'>
       <li class='nav-item'>
@@ -48,14 +48,21 @@
           <%= @subscriptions.order(creation_date: :asc).first.creation_date %>
         </div>
 
-        <div class="fact-item">
-          <p>Average Monthly Spend: £85.30</p>
-        </div>
-      </div>
 
+    <div class="fact-item" class="total-billing">
+      <% subscriptions = Subscription.all %>
+      <% price_array = subscriptions.map do |s| %>
+      <% s.price %>
+      <% end %>
+      <% total = price_array.compact.sum %>
+      <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
+    </div>
 
+    <div class="fact-item">
+      <p>Average Monthly Spend: £85.30</p>
+    </div>
+  </div>
 
-      <!------- Dashboard Contents ---------->
 
 
       <div class="chart-container" style="width: 800px; margin: 40px auto 0 auto;">
