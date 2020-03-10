@@ -484,35 +484,101 @@
           $('#get-transactions-data').slideUp(function() {
             var html = '<tr><td><strong>NAME</strong></td><td><strong>AMOUNT</strong></td><td><strong>DATE</strong></td></tr>';
             data.transactions.transactions.forEach(function(txn, idx) {
-              if (idx === 1 ) {
+              if (idx === 0 ) {
                 html += '<tr>';
-                html += '<td>' + 'Netflix' + '</td>';
-                html += '<td>$' + '5.99' + '</td>';
-                html += '<td>' + '2020-01-28' + '</td>';
+                html += '<td>' + '<i class="fas fa-flag green"></i>' +'Netflix.com' + '</td>';
+                html += '<td>$' + '8.99' + '</td>';
+                html += '<td>' + '2020-03-13' + '</td>';
+                html += '</tr>';
+              }else if (idx === 1 ) {
+                html += '<tr>';
+                html += '<td>' + 'UBER' + '</td>';
+                html += '<td>$' + '29.48' + '</td>';
+                html += '<td>' + '2020-03-12' + '</td>';
                 html += '</tr>';
               }else if (idx === 2 ) {
                 html += '<tr>';
-                html += '<td>' + 'Apple Music' + '</td>';
+                html += '<td>' + '<i class="fas fa-flag green"></i>' +'Spotify Finance Limited' + '</td>';
                 html += '<td>$' + '9.99' + '</td>';
-                html += '<td>' + '2020-01-14' + '</td>';
+                html += '<td>' + '2020-03-09' + '</td>';
+                html += '</tr>';
+              }else if (idx === 3 ) {
+                html += '<tr>';
+                html += '<td>' + 'United Airlines' + '</td>';
+                html += '<td>$' + '189' + '</td>';
+                html += '<td>' + '2020-03-07' + '</td>';
+                html += '</tr>';
+              }else if (idx === 4 ) {
+                html += '<tr>';
+                html += '<td>' + "Vito's Pizza" + '</td>';
+                html += '<td>$' + '14.52' + '</td>';
+                html += '<td>' + '2020-03-04' + '</td>';
                 html += '</tr>';
               }else if (idx === 5 ) {
                 html += '<tr>';
-                html += '<td>' + 'Spotify' + '</td>';
+                html += '<td>' + 'Deliveroo' + '</td>';
+                html += '<td>$' + '16.84' + '</td>';
+                html += '<td>' + '2020-03-01' + '</td>';
+                html += '</tr>';
+              }else if (idx === 6 ) {
+                html += '<tr>';
+                html += '<td>' + 'Silver Lake Yoga' + '</td>';
+                html += '<td>$' + '25.00' + '</td>';
+                html += '<td>' + '2020-02-27' + '</td>';
+                html += '</tr>';
+              }else if (idx === 7 ) {
+                html += '<tr>';
+                html += '<td>' + 'Liquid Juice Bar' + '</td>';
+                html += '<td>$' + '7.54' + '</td>';
+                html += '<td>' + '2020-02-24' + '</td>';
+                html += '</tr>';
+              }else if (idx === 8 ) {
+                html += '<tr>';
+                html += '<td>' + 'AMAZON.COM AMZN.COM/BILL' + '</td>';
+                html += '<td>$' + '71.60' + '</td>';
+                html += '<td>' + '2020-02-22' + '</td>';
+                html += '</tr>';
+              }else if (idx === 9 ) {
+                html += '<tr>';
+                html += '<td>' + '<i class="fas fa-flag green"></i>' +'The New York Times' + '</td>';
                 html += '<td>$' + '9.99' + '</td>';
-                html += '<td>' + '2019-12-11' + '</td>';
+                html += '<td>' + '2020-02-21' + '</td>';
+                html += '</tr>';
+              }else if (idx === 10 ) {
+                html += '<tr>';
+                html += '<td>' + 'UBER' + '</td>';
+                html += '<td>$' + '26.44' + '</td>';
+                html += '<td>' + '2020-02-18' + '</td>';
+                html += '</tr>';
+              }else if (idx === 11 ) {
+                html += '<tr>';
+                html += '<td>' + 'LA Boulders' + '</td>';
+                html += '<td>$' + '64.50' + '</td>';
+                html += '<td>' + '2020-02-18' + '</td>';
+                html += '</tr>';
+              }else if (idx === 12 ) {
+                html += '<tr>';
+                html += '<td>' + '<i class="fas fa-flag green"></i>' + 'Apple Music' + '</td>';
+                html += '<td>$' + '9.99' + '</td>';
+                html += '<td>' + '2020-02-16' + '</td>';
+                html += '</tr>';
+              }else if (idx === 13 ) {
+                html += '<tr>';
+                html += '<td>' + "Pink's Hot Dogs" + '</td>';
+                html += '<td>$' + '8.63' + '</td>';
+                html += '<td>' + '2020-02-15' + '</td>';
                 html += '</tr>';
               }else if (idx === 14 ) {
                 html += '<tr>';
-                html += '<td>' + 'Nandos' + '</td>';
-                html += '<td>$' + '14.99' + '</td>';
-                html += '<td>' + '2019-11-14' + '</td>';
+                html += '<td>' + '<i class="fas fa-flag green"></i>' + 'Netflix.com' + '</td>';
+                html += '<td>$' + '8.99' + '</td>';
+                html += '<td>' + '2020-02-13' + '</td>';
                 html += '</tr>';
               }else if (idx === 15 ) {
                 html += '<tr>';
-                html += '<td>' + 'Spotify' + '</td>';
-                html += '<td>$' + '9.99' + '</td>';
-                html += '<td>' + '2019-11-11' + '</td>';
+                html += '<td>' + 'American Airlines' + '</td>';
+                html += '<td>$' + '213' + '</td>';
+                html += '<td>' + '2020-02-09' + '</td>';
                 html += '</tr>';
               }else {
                 html += '<tr>';
