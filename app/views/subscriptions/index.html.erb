@@ -1,5 +1,7 @@
 <div class="dashboard-page">
 
+ <!----------- Navbar ------------>
+
   <div class="index-navbar" id="navbar">
     <%= link_to :root, class: 'navbar-brand' do %>
     <%= image_tag "logo-resize-2", class: "subscripto-logo" %>
@@ -29,15 +31,25 @@
     </ul>
   </div>
 
-
-
+<!------- Dashboard Contents ---------->
 
   <div class="dashboard-container">
-    <div>
-      <div class="chart-container" style="width: 800px; margin: 40px auto 0 auto;">
+    <div class="chart-container" style="width: 800px; margin: 40px auto 0 auto;">
+      <div class="section-title"><h5>My Activity</h5></div>
+      <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <div class="user-subs" >
+      <div class="subscriptions-box" style="width: 800px; margin: 0 auto;">
+        <div class="section-title"><h5>My Subscriptions (<%=  @subscriptions.count %>)</h5>
+          <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription <i class="fas fa-plus"></i></button>
+        </div>
+        <div class="subscriptions-table-category-names">
+          <div>SERVICE</div>
+          <div>NEXT PAYMENT</div>
+          <div>PRICE</div>
+        </div>
 
-        <div class="section-title"><h5>My Activity</h5></div>
-        <canvas id="myChart"></canvas>
         <div class="total-billing">
           <% subscriptions = Subscription.all %>
           <% price_array = subscriptions.map do |s| %>
@@ -45,96 +57,73 @@
           <% end %>
           <% total = price_array.sum %>
           <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
-          <div>
-          </div>
         </div>
-      </div>
 
-        <div class="activity-sidebar">
-          <div class="price-average">
-            <h5><strong>How much you said?</strong></h5>
-            <h6>Lifetime average</h6>
-            <h6>Monthly average</h6>
-          </div>
-
-
-          <div class="top-subscriptions">
-           <h5><strong>My oldest subscriptions</strong></h5>
-            <h6></h6>
-          </div>
-        </div>
-      </div>
-      <div class="user-subs" >
-        <div class="subscriptions-box" style="width: 800px; margin: 0 auto;">
-          <div class="section-title"><h5>My Subscriptions</h5>
-            <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription <i class="fas fa-plus"></i></button>
-          </div>
-          <% @subscriptions.each do |subscription| %>
-            <%= link_to subscription_path(subscription), style: 'text-decoration: none;' do %>
-              <div class="subscription-card zoom">
-                <div>
-                  <% result = subscription.renewal_date - Date.today %>
-                  <% days = result.to_i %>
-                  <% if days < 7 %>
-                    <div class="red-status"></div>
-                  <% elsif days > 7 && days < 14 %>
-                    <div class="yellow-status"></div>
-                  <% else %>
-                    <div class="green-status"></div>
-                 <% end %>
-                </div>
-                <div class="subscription-card-info">
-                  <h2><%= subscription.title %></h2>
-                  <%# date1 = subscription.creation_date %>
-                  <%# date2 = Date.today %>
-                  <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-                  <!-- <p>Total Spent: £ <%#= all_time_total = months * subscription.price %> </p> -->
-                  <%# date1 = subscription.creation_date %>
-                  <%# date2 = Date.today %>
-                  <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-                  <!-- <p> Time:<%#= months / 12 %> Years <%#= months % 12 %> Months </p> -->
-                  <h2 class="card-trip-pricing">Price: £<%= subscription.price %></h2>
-                </div>
-                <div>
-                  <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
-                </div>
+        <% @subscriptions.each do |subscription| %>
+          <%= link_to subscription_path(subscription), style: 'text-decoration: none;' do %>
+            <div class="subscription-card zoom">
+              <div>
+                <% result = subscription.renewal_date - Date.today %>
+                <% days = result.to_i %>
+                <% if days < 7 %>
+                  <div class="red-status"></div>
+                <% elsif days > 7 && days < 14 %>
+                  <div class="yellow-status"></div>
+                <% else %>
+                  <div class="green-status"></div>
+               <% end %>
               </div>
-            <% end %>
+              <div class="subscription-card-info">
+                <h2><%= subscription.title %></h2>
+                <%# date1 = subscription.creation_date %>
+                <%# date2 = Date.today %>
+                <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+                <!-- <p>Total Spent: £ <%#= all_time_total = months * subscription.price %> </p> -->
+                <%# date1 = subscription.creation_date %>
+                <%# date2 = Date.today %>
+                <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+                <!-- <p> Time:<%#= months / 12 %> Years <%#= months % 12 %> Months </p> -->
+                <h3 class="card-trip-pricing">£<%= subscription.price %></h3>
+              </div>
+              <div>
+                <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
+              </div>
+            </div>
           <% end %>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Large modal -->
-          <div class="cards-container">
-            <div class="modal fade" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div>
-                      <h2>Add Subscription</h2>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
-                    </div>
-                  </div>
-                  <div class="modal-body">
-                    <div class="subscription-container">
-                      <%= simple_form_for Subscription.new do |f| %>
-                      <%= f.input :title %>
-                      <%= f.input :price %>
-                      <%= f.input :creation_date %>
-                      <%= f.input :renewal_date %>
-                      <%= f.button :submit, class: "btn btn-primary" %>
-                      <% end %>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+<!------- Large modal ---------->
+
+
+<div class="cards-container">
+  <div class="modal fade" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h2>Add Subscription</h2>
           </div>
-<!-- Large modal -->
-
-
+          <div>
+            <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="subscription-container">
+            <%= simple_form_for Subscription.new do |f| %>
+            <%= f.input :title %>
+            <%= f.input :price %>
+            <%= f.input :creation_date %>
+            <%= f.input :renewal_date %>
+            <%= f.button :submit, class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
