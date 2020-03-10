@@ -33,9 +33,9 @@
 
 <!------- Fun Facts ---------->
 
-  <div class=fun-facts>
+  <div class="fun-facts">
 
-    <div class="total-billing">
+    <div class="fact-item" class="total-billing">
       <% subscriptions = Subscription.all %>
       <% price_array = subscriptions.map do |s| %>
       <% s.price %>
@@ -44,12 +44,12 @@
       <strong><%="Next Month Bill: $#{total.round(2)}"%></strong>
     </div>
 
-    <div>
+    <div class="fact-item">
       <%= @subscriptions.order(creation_date: :asc).first.title %>
       <%= @subscriptions.order(creation_date: :asc).first.creation_date %>
     </div>
 
-    <div>
+    <div class="fact-item">
       <p>Average Monthly Spend: £85.30</p>
     </div>
 

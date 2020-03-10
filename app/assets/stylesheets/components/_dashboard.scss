@@ -22,19 +22,6 @@
   align-items: center;
 }
 
-// .dashboard-total {
-//   font-size: 16px;
-//   background-color: red;
-//   color: white;
-//   border-radius: 7px;
-//   padding: 4px 15px;
-//   align-items: center;
-//   height: 55px;
-//   display: flex;
-//   align-items: center;
-// }
-
-
 .section-title {
   border-bottom: solid 1px grey;
   margin: 20px 0;
@@ -58,7 +45,6 @@
 }
 
 .total-billing {
-  margin-left: 30px;
 }
 
 .whole-dashboard-background {
@@ -83,15 +69,16 @@
   color: #234B8B;
  }
 
- // .total-and-add {
-//   display: flex;
-//   justify-content: space-between;
-//   margin: 0px 50px;
-//   margin-top: 30px;
-//   margin-left: 395px;
-// }
+ .fun-facts {
+  display: flex;
+  justify-content: center;
+ }
 
-// .subscriptions-chart {
-//   display: flex;
-//   align-items: flex-end;
-// }
+ .fact-item {
+  padding: 20px 20px;
+  margin: 20px 20px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+ }
+
