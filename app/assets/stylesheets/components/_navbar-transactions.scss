@@ -12,25 +12,6 @@
   font-family: Montserrat ;
 }
 
-// .index-navbar {
-//   display: flex;
-//   width: 100%;
-//   // height: 1px;
-//   flex-wrap: wrap;
-//   -webkit-box-align: center;
-//   align-items: center;
-//   -webkit-box-pack: justify;
-//   justify-content: space-between;
-//   padding: 0rem 2rem;
-//   font-family: Montserrat;
-//   background-color: white;
-//   border-bottom: solid 1px #e7e7e7;
-
-//     a.index-nav-link {
-//       font-size: 17px;
-//     }
-// }
-
 .transactions-underline-menu {
   display: flex;
   padding: 0;
@@ -41,7 +22,7 @@
 
   &:hover {
     li:not(:hover) a {
-      opacity: 0.2;
+      opacity: 0.4;
     }
   }
 
@@ -55,7 +36,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: white;
+      background: #382f2f;
       transform: scaleX(0);
       transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
@@ -73,13 +54,13 @@
       padding: 30px 25px 30px 25px;
       line-height: 1;
       text-decoration: none;
-      color: white;
+      color: #382f2f;
       transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
   }}
 
 a.transactions-nav-link {
-  color: white;
+  color: #382f2f;
   font-size: 17px;
   padding-top: 15px;
   padding-bottom: 20px;
