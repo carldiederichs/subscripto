@@ -31,7 +31,16 @@
 }
 
 .add-subscription-btn {
-  color: #234B8B;
+  border: solid 1px #5f84b9;
+  background: #5f84b9;
+  color: white;
+  border-radius: 7px;
+  transition: 0.2s;
+}
+
+.add-subscription-btn:hover {
+  background-color: #234B8B;
+  color: white;
 }
 
 .whole-dashboard-background {
@@ -78,6 +87,7 @@
 
  }
 
+
  .modal-header {
   display: flex;
   justify-content: center;
@@ -123,6 +133,7 @@
   border-radius: 10px;
   width: 60%;
 }
+
 
 
 
