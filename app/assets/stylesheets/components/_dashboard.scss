@@ -87,8 +87,55 @@
 
  }
 
- .subs-btn-box {
-  margin: 10px;
- }
+
+ .modal-header {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 12%;
+  padding-bottom: 8%;
+}
+
+.modal-content {
+  margin-left: 20%;
+}
+
+.add-sub-btn {
+  font-size: 16px;
+  border-radius: 7px;
+  padding: 10px 15px;
+  background-color: #4b74b0;
+  color: white;
+  border-color: #4b74b0;
+  font-family: Montserrat;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#new_subscription {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title-container {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin-left: 19%
+  // margin-top: 3%;
+}
+
+.modal-content {
+  border-radius: 10px;
+  width: 60%;
+}
+
+
+
+
 
 
