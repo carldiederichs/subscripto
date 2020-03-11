@@ -3,30 +3,30 @@
 
 <!---------- Nav-Bar ---------->
 
-  <div class="home-navbar" id="navbar">
+  <div class="navbar home-navbar">
     <%= link_to :root, class: 'navbar-brand' do %>
-      <%= image_tag "logo-resize-2.png", class: "subscripto-logo" %>
+      <%= image_tag "logo-resize-2.png", class: "home-subscripto-logo" %>
     <% end %>
-      <ul class='underline-menu'>
-        <li class='nav-item'>
-          <%= link_to 'Help', root_path, class: 'nav-link'%>
+      <ul class='home-underline-menu'>
+        <li class='nav-item home-nav-item'>
+          <%= link_to 'Help', root_path, class: 'nav-link home-nav-link'%>
         </li>
-        <li class='nav-item'>
-          <%= link_to 'Scan My Account', transactions_path, class: 'nav-link'%>
+        <li class='nav-item home-nav-item'>
+          <%= link_to 'Scan My Account', transactions_path, class: 'nav-link home-nav-link'%>
         </li>
         <% if current_user.nil? %>
-          <li class='nav-item'>
-            <%= link_to 'Sign up', '/users/sign_up', class: 'nav-link' %>
+          <li class='nav-item home-nav-item'>
+            <%= link_to 'Sign up', '/users/sign_up', class: 'nav-link home-nav-link' %>
           </li>
-          <li class='nav-item'>
-            <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
+          <li class='nav-item home-nav-item'>
+            <%= link_to 'Log in', new_user_session_path, class: 'nav-link home-nav-link' %>
           </li>
         <% else %>
-          <li class='nav-item'>
-            <%= link_to 'My Subscriptions', subscriptions_path, class: 'nav-link' %>
+          <li class='nav-item home-nav-item'>
+            <%= link_to 'My Subscriptions', subscriptions_path, class: 'nav-link home-nav-link' %>
           </li>
-          <li class='nav-item'>
-            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+          <li class='nav-item home-nav-item'>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link home-nav-link' %>
           </li>
         <% end %>
       </ul>

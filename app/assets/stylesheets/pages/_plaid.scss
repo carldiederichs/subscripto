@@ -245,6 +245,24 @@ Display content inside of box
   text-decoration: none;
 }
 
+.transactions-banner-image {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: top;
+}
+
+.transactions-box {
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.5);
+  align-items: center;
+}
+
+.transactions-box-inside {
+  padding: 20px 20px;
+}
+
 /*
 
 Item row

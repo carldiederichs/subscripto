@@ -1,8 +1,45 @@
+<!---------- Nav-Bar ---------->
+
+<div class="navbar transactions-navbar">
+  <%= link_to :root, class: 'navbar-brand' do %>
+    <%= image_tag "logo-resize-2.png", class: "transactions-subscripto-logo" %>
+  <% end %>
+    <ul class='transactions-underline-menu'>
+      <li class='nav-item transactions-nav-item'>
+        <%= link_to 'Help', root_path, class: 'nav-link transactions-nav-link'%>
+      </li>
+      <li class='nav-item transactions-nav-item'>
+        <%= link_to 'Scan My Account', transactions_path, class: 'nav-link transactions-nav-link'%>
+      </li>
+      <% if current_user.nil? %>
+        <li class='nav-item transactions-nav-item'>
+          <%= link_to 'Sign up', '/users/sign_up', class: 'nav-link transactions-nav-link' %>
+        </li>
+        <li class='nav-item transactions-nav-item'>
+          <%= link_to 'Log in', new_user_session_path, class: 'nav-link transactions-nav-link' %>
+        </li>
+      <% else %>
+        <li class='nav-item transactions-nav-item'>
+          <%= link_to 'My Subscriptions', subscriptions_path, class: 'nav-link transactions-nav-link' %>
+        </li>
+        <li class='nav-item transactions-nav-item'>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link transactions-nav-link' %>
+        </li>
+      <% end %>
+    </ul>
+</div>
+
+<!---------- Banner Image ---------->
+
+<div class="transactions-banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1453090643118-eae60f5bc58a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
+
+<!---------- Beginning of actual API ---------->
+
 <% item_id = nil %>
 <% access_token = nil %>
 <main class="main">
-    <div class="grid">
-      <div class="grid__column grid__column--is-twelve-columns">
+    <div class="grid transactions-box">
+      <div class="grid__column grid__column--is-twelve-columns transactions-box-inside">
         <div id="banner" class="everpresent-content">
           <h1 class="everpresent-content__heading">Connect Your Bank Account</h1>
           <p id="intro" class="everpresent-content__subheading">
