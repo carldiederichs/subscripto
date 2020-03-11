@@ -12,7 +12,6 @@ if (document.getElementById("welcome-text") != null) {
     typeSpeed: 20,
     fadeOut: true,
     loop: true,
-    shuffle: true,
     showCursor: false,
   });
 };
