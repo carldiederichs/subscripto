@@ -9,7 +9,6 @@
 
 .show-card {
   background-color: white;
-  height: 70%;
   width: 25%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -26,7 +25,7 @@
 }
 
 .show-card-header {
-  height: 75px;
+  height: 10vh;
   border-bottom: #e7e7e7 solid 1px;
   overflow: hidden;
   display: flex;
@@ -90,7 +89,7 @@
 }
 
 .show-cancel-button {
-  border-radius: 25px;
+  border-radius: 10px;
   margin-bottom: 30px;
   margin-top: 15px;
   // color: #4b74b0;
@@ -132,7 +131,7 @@
 
 .back-button {
   margin: 6px 18px;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 // .show-company-logo {
@@ -144,4 +143,17 @@
 //   margin-bottom: 15px;
 // }
 
+.modal-question {
+  text-align: center;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-btns {
+  margin: 0px 10px;
+  border-radius: 10px;
+}
 

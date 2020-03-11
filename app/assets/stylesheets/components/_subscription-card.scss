@@ -28,20 +28,18 @@
 
 .subscription-card-info {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
   background: white;
   padding: 10px;
   color: black;
-  p {
-    margin: 10px 0;
-    color: #234B8B;
-  }
 
   h2 {
     font-size: 20px;
     font-weight: bold;
+    margin-left: 45px;
   }
 }
 

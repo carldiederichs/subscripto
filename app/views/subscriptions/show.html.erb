@@ -52,11 +52,10 @@
       </div>
       <div class="show-card-footer">
         <%= link_to subscriptions_path do %>
-          <button class="btn back-button">Back</button>
+          <button class="btn btn-outline-secondary back-button">Back</button>
         <% end %>
         <%= link_to "https://#{@subscription.title.split(' ').first}.com", target: "_blank" do %>
           <button type="button" class="btn btn-outline-primary show-cancel-button" data-toggle="modal" data-target="#cancelModal">Cancel Subscription</button>
-
         <% end %>
       </div>
     </div>
@@ -69,17 +68,15 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Did you manage to cancel your <%= @subscription.title %> subscription</h2>
+        <h2 class="modal-question">Did You Manage to Cancel Your <%= @subscription.title %> Subscription?</h2>
       </div>
       <div class="modal-body">
         <%= link_to subscription_path(@subscription) do %>
-          <button>no</button>
+          <button class="btn btn-outline-primary modal-btns">No</button>
         <% end %>
         <%= link_to subscription_path(@subscription), method: :delete do %>
-          <button>yes</button>
+          <button class="btn btn-outline-primary modal-btns">Yes</button>
         <% end %>
-      </div>
-      <div class="modal-footer">
       </div>
     </div>
   </div>
