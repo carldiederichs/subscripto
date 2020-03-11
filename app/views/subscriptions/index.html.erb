@@ -60,7 +60,7 @@
           <div class="fact-bubbles">$<%=total.round(2)%></div>
         </div>
 
-        <div class="fact-item">
+<!--         <div class="fact-item">
           <% if @subscriptions.count == 0 %>
             <p></p>
           <% else %>
@@ -68,15 +68,15 @@
             <strong>Oldest Subscription: </strong>
           </div>
           <div>
-          <img src="https://logo.clearbit.com/<%= @subscriptions.order(creation_date: :asc).first.title.split(' ').first.downcase %>.com" class="oldest-subscription-fact">
-            <% oldest_subscription = @subscriptions.order(creation_date: :asc).first %>
-            <%= oldest_subscription.title %></div>
-            <% date1 = oldest_subscription.creation_date %>
-            <% date2 = Date.today %>
-            <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-             <p>Total Spent: £<%= all_time_total = months * oldest_subscription.price %> </p>
-          <% end %>
-        </div>
+            <img src="https://logo.clearbit.com/<%= @subscriptions.order(creation_date: :asc).first.title.split(' ').first.downcase %>.com" class="oldest-subscription-fact">
+              <% oldest_subscription = @subscriptions.order(creation_date: :asc).first %>
+              <%= oldest_subscription.title %></div>
+              <% date1 = oldest_subscription.creation_date %>
+              <% date2 = Date.today %>
+              <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+             <!--   <div class="fact-bubbles"><p>£<%= all_time_total = months * oldest_subscription.price %> </p></div> -->
+           <!--  <% end %> -->
+         <!--  </div>  -->
 
         <div class="fact-item">
           <p><strong>Average Monthly Spend: </strong></p>
@@ -87,7 +87,7 @@
 
 
       <div class="chart-container">
-        <div class="section-title"><h5>My Activity</h5></div>
+        <div class="section-title"><h5>My Yearly Spending</h5></div>
         <canvas id="myChart"></canvas>
       </div>
     </div>
@@ -96,7 +96,7 @@
 
     <div class="subscriptions-container">
       <div class="section-title"><h5 class='m-0'>My Subscriptions (<%=  @subscriptions.count %>)</h5>
-        <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription <i class="fas fa-plus"></i></button>
+        <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription  <i class="fas fa-plus"></i></button>
       </div>
       <div class="subscriptions-table-category-names">
         <div>SERVICE</div>
