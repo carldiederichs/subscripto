@@ -49,22 +49,28 @@
   background-color: #16243b;
  }
 
- .activity-sidebar{
+.activity-sidebar{
   display: flex;
   flex-direction: column;
   width: 30%;
  }
 
- .top-subscriptions {
+.top-subscriptions {
   color: #234B8B;
  }
 
- .fun-facts {
+.fun-facts {
   display: flex;
   justify-content: center;
  }
 
- .fact-item {
+.oldest-subscription-fact {
+  position: relative;
+  left: 1;
+  width: 40px;
+ }
+
+.fact-item {
   padding: 20px 20px;
   margin: 20px 20px;
   height: auto;
@@ -72,7 +78,7 @@
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
  }
 
- .dashboard-elements {
+.dashboard-elements {
   display: flex;
  }
 

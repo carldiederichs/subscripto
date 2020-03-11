@@ -47,9 +47,15 @@
           <% if @subscriptions.count == 0 %>
             <p></p>
           <% else %>
+          <img src="https://logo.clearbit.com/<%= @subscriptions.order(creation_date: :asc).first.title.split(' ').first.downcase %>.com" class="oldest-subscription-fact">
           <strong>Oldest Subscription: </strong>
-            <%= @subscriptions.order(creation_date: :asc).first.title %>
-            <%= @subscriptions.order(creation_date: :asc).first.creation_date %>
+            <% oldest_subscription = @subscriptions.order(creation_date: :asc).first %>
+            <%= oldest_subscription.title %>
+            <%= oldest_subscription.creation_date %>
+            <% date1 = oldest_subscription.creation_date %>
+            <% date2 = Date.today %>
+            <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+             <p>Total Spent: £<%= all_time_total = months * oldest_subscription.price %> </p>
           <% end %>
         </div>
 
