@@ -1,31 +1,17 @@
-.dashboard-title {
-}
-
-.dashboard-container {
-  display: flex;
- }
-
-.dashboard-page {
-  background-color: white;
-}
 
 .chart-container {
-  height: 485px;
+  height: 385px;
+  width: 800px;
   padding: 30px 30px;
   border-radius: 8px;
   box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
   margin: 20px 20px;
+    #myChart {
+    padding: 30px 30px;
+  }
 }
 
-#myChart {
-  padding: 30px 30px;
-}
 
-.btn-dashboard {
-  height: 35px;
-  border-radius: 7px;
-  align-items: center;
-}
 
 .section-title {
   border-bottom: solid 1px grey;
@@ -39,23 +25,8 @@
   color: #234B8B;
 }
 
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 20px;
-}
-
-.total-billing {
-}
-
 .whole-dashboard-background {
   background-color: #16243b;
- }
-
-.activity-sidebar{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
  }
 
 .top-subscriptions {
@@ -74,8 +45,9 @@
  }
 
 .fact-item {
+  width: 200px;
   padding: 20px 20px;
-  margin: 20px 20px;
+  margin: 0px 10px;
   height: auto;
   border-radius: 8px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
