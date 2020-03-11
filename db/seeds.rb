@@ -12,10 +12,10 @@ user = User.all.last
 company = Company.all.last
 puts 'Creating subscriptions...'
 Subscription.create(user: user, company: company, title: 'Netflix', price: 8.99, renewal_date: Date.parse("2020/03/13"), creation_date: Date.today)
-Subscription.create(user: user, company: company, title: 'Spotify', price: 9.99, renewal_date: Date.parse("2020/03/09"), creation_date: Date.today)
-Subscription.create(user: user, company: company, title: 'Amazon', price: 71.60, renewal_date: Date.parse("2020/02/22"), creation_date: Date.today)
-Subscription.create(user: user, company: company, title: 'Apple', price: 9.99, renewal_date: Date.parse("2020/02/16"), creation_date: Date.today)
-Subscription.create(user: user, company: company, title: 'Audible', price: 8.99, renewal_date: Date.parse("2020/02/13"), creation_date: Date.today)
-Subscription.create(user: user, company: company, title: 'YouTube', price: 4.99, renewal_date: Date.parse("2020/02/13"), creation_date: Date.today)
-Subscription.create(user: user, company: company, title: 'Github', price: 10.99, renewal_date: Date.parse("2020/02/13"), creation_date: Date.today)
+Subscription.create(user: user, company: company, title: 'Spotify', price: 9.99, renewal_date: Date.parse("2020/03/14"), creation_date: Date.today)
+Subscription.create(user: user, company: company, title: 'Amazon', price: 71.60, renewal_date: Date.parse("2020/03/21"), creation_date: Date.today)
+Subscription.create(user: user, company: company, title: 'Apple Music', price: 9.99, renewal_date: Date.parse("2020/04/1"), creation_date: Date.today)
+Subscription.create(user: user, company: company, title: 'Audible', price: 8.99, renewal_date: Date.parse("2020/04/1"), creation_date: Date.today)
+Subscription.create(user: user, company: company, title: 'YouTube Premium', price: 4.99, renewal_date: Date.parse("2020/04/1"), creation_date: Date.today)
+Subscription.create(user: user, company: company, title: 'Github', price: 10.99, renewal_date: Date.parse("2020/04/3"), creation_date: Date.today)
 puts 'Seeding done'
