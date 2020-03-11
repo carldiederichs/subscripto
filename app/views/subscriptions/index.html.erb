@@ -112,7 +112,9 @@
               <% if days < 7 %>
               <h6 class="h6-expires-soon">renews soon</h6>
               <% elsif days > 7 && days < 14 %>
+
               <h6 class="h6-expires-soon">renews 1-2 weeks</h6>
+
                <% end %>
               <h3 class="card-trip-pricing">£<%= subscription.price %></h3>
             </div>
@@ -134,23 +136,21 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <div>
+          <div class="modal-title-container">
             <h2>Add Subscription</h2>
-          </div>
-          <div>
-            <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
+            <div>
+              <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
+            </div>
           </div>
         </div>
         <div class="modal-body">
-          <div class="subscription-container">
-            <%= simple_form_for Subscription.new do |f| %>
-            <%= f.input :title %>
-            <%= f.input :price %>
-            <%= f.input :creation_date %>
-            <%= f.input :renewal_date %>
-            <%= f.button :submit, class: "btn btn-primary" %>
-            <% end %>
-          </div>
+          <%= simple_form_for Subscription.new do |f| %>
+          <%= f.input :title %>
+          <%= f.input :price %>
+          <%= f.input :creation_date %>
+          <%= f.input :renewal_date %>
+          <%= f.button :submit, class: "btn add-sub-btn" %>
+          <% end %>
         </div>
       </div>
     </div>
