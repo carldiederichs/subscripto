@@ -29,10 +29,6 @@
     </ul>
 </div>
 
-<!---------- Banner Image ---------->
-
-<div class="transactions-banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1453090643118-eae60f5bc58a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
-
 <!---------- Beginning of actual API ---------->
 
 <% item_id = nil %>
@@ -55,7 +51,7 @@
           </p>
 
           <button id="link-btn" class="button button--is-primary" disabled>connect bank account</button>
-          <%= link_to "Back to Homepage", root_path, class: 'back-to-homepage-button'%>
+          <%= link_to "Your Subscriptions", subscriptions_path, class: 'back-to-homepage-button'%>
           <div class="loading-indicator"></div>
 
         </div>
@@ -66,7 +62,7 @@
 
           <div class="box">
             <div class="box__heading">
-                <h3><button id="get-transactions-btn" class="button button--is-small button--is-default button--is-full-width">Reveal Transactions</button></h3>
+                <button id="get-transactions-btn" class="button button--is-small button--is-default button--is-full-width">Reveal Transactions</button>
             </div>
 
             <!--Transactions -->
@@ -77,8 +73,6 @@
                 <table id="transactions-table"><tbody id="get-transactions-data"></tbody></table>
               </div>
             </div>
-
-
 
             <!-- <div class="item-overview__column">
               <h3 class="item-overview__heading">Your item_id</h3>
@@ -280,6 +274,7 @@
       </div>
     </div>
   </main>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
@@ -614,6 +609,12 @@
                 html += '</tr>';
               }else if (idx === 15 ) {
                 html += '<tr>';
+                html += '<td>' + '<i class="fas fa-flag transparent-flag"></i>' + 'Yeastie Boys Bagels' + '</td>';
+                html += '<td>$' + '7.33' + '</td>';
+                html += '<td>' + '2020-02-11' + '</td>';
+                html += '</tr>';
+              }else if (idx === 16 ) {
+                html += '<tr>';
                 html += '<td>' + '<i class="fas fa-flag transparent-flag"></i>' + 'American Airlines' + '</td>';
                 html += '<td>$' + '213.00' + '</td>';
                 html += '<td>' + '2020-02-09' + '</td>';
@@ -797,3 +798,8 @@ function displayError(element, error) {
   $(element).html(html).slideDown();
 }
   </script>
+
+<footer class="center">
+    <p>Subscripto &copy; 2020</p>
+</footer>
+
