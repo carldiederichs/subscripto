@@ -60,29 +60,6 @@
           <div class="fact-bubbles">$<%=total.round(2)%></div>
         </div>
 
-<!--         <div class="fact-item">
-          <% if @subscriptions.count == 0 %>
-            <p></p>
-          <% else %>
-          <div>
-            <strong>Oldest Subscription: </strong>
-          </div>
-          <div>
-
-            <div class="d-flex align-items-center">
-              <img src="https://logo.clearbit.com/<%= @subscriptions.order(creation_date: :asc).first.title.split(' ').first.downcase %>.com" class="oldest-subscription-fact">
-              <div>
-                <% oldest_subscription = @subscriptions.order(creation_date: :asc).first %>
-                <p><%= oldest_subscription.title %></p></div>
-                <% date1 = oldest_subscription.creation_date %>
-                <% date2 = Date.today %>
-                <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-                <p>Total Spent: £<%= all_time_total = months * oldest_subscription.price %> </p>
-              </div>
-            </div>
-          <% end %>
-        </div>
-
         <div class="fact-item">
           <p><strong>Average Monthly Spend: </strong></p>
           <div class="fact-bubbles">£85.30</div>
