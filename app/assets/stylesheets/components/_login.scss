@@ -5,7 +5,7 @@
 .container-of-containers {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 h1 {
@@ -241,28 +241,33 @@ button.ghost {
   text-decoration: none;
 }
 
-footer {
-    background-color: transparenta;
-    color: #fff;
-    font-size: 16px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: right;
-    z-index: 999;
-    font-family: Montserrat;
+.center {
+  color: black;
+  text-align: center;
 }
 
-footer p {
-    margin: 20px 20px;
-}
+// footer {
+//     background-color: transparent;
+//     color: #fff;
+//     font-size: 16px;
+//     bottom: 0;
+//     position: fixed;
+//     left: 0;
+//     right: 0;
+//     text-align: right;
+//     z-index: 999;
+//     font-family: Montserrat;
+// }
 
-footer i {
-    color: red;
-}
+// footer p {
+//     margin: 20px 20px;
+// }
 
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
+// footer i {
+//     color: red;
+// }
+
+// footer a {
+//     color: #3c97bf;
+//     text-decoration: none;
+// }
