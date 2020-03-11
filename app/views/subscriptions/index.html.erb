@@ -30,13 +30,11 @@
     </ul>
 </div>
 
-<!-- title -->
-
-<h1 class='dashboard-title'>My Subscriptions</h1>
 
 <!------- Fun Facts ---------->
   <div class="dashboard-elements">
     <div class="facts-and-graph-container">
+      <h1 class='dashboard-title'>Dashboard</h1>
       <div class="fun-facts">
         <div class="fact-item" class="total-billing">
           <% subscriptions = Subscription.all %>
@@ -81,8 +79,6 @@
     <div class="color-code-and-subscriptions-container">
       <div class="color-code-container">
         <div class="color-key-red">7 days to renewal (or less)</div>
-        <div class="color-key-yellow">14 days to renewal (or less)</div>
-        <div class="color-key-green">More than 14 days:</div>
       </div>
 
       <div class="subscriptions-container">
