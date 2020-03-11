@@ -6,6 +6,8 @@
   border-radius: 8px;
   box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
   margin: 40px 20px;
+    height: 467px;
+
     #myChart {
     padding: 30px 30px;
   }
@@ -147,7 +149,10 @@
   width: 60%;
 }
 
-
+.subscriptions-holder {
+  overflow-y: scroll;
+  height: 488px;
+}
 
 
 
