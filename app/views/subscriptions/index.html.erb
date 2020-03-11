@@ -60,7 +60,7 @@
           <div class="fact-bubbles">$<%=total.round(2)%></div>
         </div>
 
-        <div class="fact-item">
+<!--         <div class="fact-item">
           <% if @subscriptions.count == 0 %>
             <p></p>
           <% else %>
@@ -68,6 +68,7 @@
             <strong>Oldest Subscription: </strong>
           </div>
           <div>
+
             <div class="d-flex align-items-center">
               <img src="https://logo.clearbit.com/<%= @subscriptions.order(creation_date: :asc).first.title.split(' ').first.downcase %>.com" class="oldest-subscription-fact">
               <div>
@@ -91,7 +92,7 @@
 
 
       <div class="chart-container">
-        <div class="section-title"><h5>My Activity</h5></div>
+        <div class="section-title"><h5>My Yearly Spending</h5></div>
         <canvas id="myChart"></canvas>
       </div>
     </div>
@@ -100,7 +101,7 @@
 
     <div class="subscriptions-container">
       <div class="section-title"><h5 class='m-0'>My Subscriptions (<%=  @subscriptions.count %>)</h5>
-        <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription <i class="fas fa-plus"></i></button>
+        <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription  <i class="fas fa-plus"></i></button>
       </div>
       <div class="subscriptions-table-category-names">
         <div>SERVICE</div>
