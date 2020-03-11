@@ -5,16 +5,25 @@
   padding: 30px 30px;
   border-radius: 8px;
   box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
-  margin: 20px 20px;
+  margin: 40px 20px;
     #myChart {
     padding: 30px 30px;
   }
 }
 
+.facts-and-graph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.color-code-and-subscriptions-container {
+  width: 800px;
+}
 
 
 .section-title {
-  border-bottom: solid 1px grey;
+  border-bottom: solid 1px #e7e7e7;
   // margin: 20px 0;
   display: flex;
   justify-content: space-between;
@@ -35,7 +44,10 @@
 
 .fun-facts {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
  }
 
 .oldest-subscription-fact {
@@ -56,3 +68,14 @@
 .dashboard-elements {
   display: flex;
  }
+
+ .dashboard-title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #e7e7e7;
+  margin: 40px;
+
+ }
+
+
