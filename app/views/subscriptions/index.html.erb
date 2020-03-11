@@ -135,23 +135,21 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <div>
+          <div class="modal-title-container">
             <h2>Add Subscription</h2>
-          </div>
-          <div>
-            <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
+            <div>
+              <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#myModal"><i class="fas fa-times"></i></button>
+            </div>
           </div>
         </div>
         <div class="modal-body">
-          <div class="subscription-container">
-            <%= simple_form_for Subscription.new do |f| %>
-            <%= f.input :title %>
-            <%= f.input :price %>
-            <%= f.input :creation_date %>
-            <%= f.input :renewal_date %>
-            <%= f.button :submit, class: "btn btn-primary" %>
-            <% end %>
-          </div>
+          <%= simple_form_for Subscription.new do |f| %>
+          <%= f.input :title %>
+          <%= f.input :price %>
+          <%= f.input :creation_date %>
+          <%= f.input :renewal_date %>
+          <%= f.button :submit, class: "btn add-sub-btn" %>
+          <% end %>
         </div>
       </div>
     </div>
