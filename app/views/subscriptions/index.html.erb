@@ -106,7 +106,9 @@
             <div class="subscription-card-info">
               <h2><%= subscription.title.capitalize %></h2>
               <% if days < 7 %>
-              <h6 class="h6-expires-soon">expires soon</h6>
+              <h6 class="h6-expires-soon">renews soon</h6>
+              <% elsif days > 7 && days < 14 %>
+                <h6 class="h6-expires-soon">renews 1-2 weeks</h6>
                <% end %>
               <h3 class="card-trip-pricing">£<%= subscription.price %></h3>
             </div>
