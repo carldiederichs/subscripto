@@ -71,8 +71,12 @@
         <h2 class="modal-question">Did You Manage to Cancel Your <%= @subscription.title %> Subscription?</h2>
       </div>
       <div class="modal-body">
-        <%= link_to "No", subscription_path(@subscription), class:"btn btn-outline-primary modal-btns" %>
-        <%= link_to "Yes", subscription_path(@subscription), class:"btn btn-outline-primary modal-btns", ethod: :delete %>
+        <%= link_to subscription_path(@subscription) do %>
+          <button class="btn btn-outline-primary modal-btns">No</button>
+        <% end %>
+        <%= link_to subscription_path(@subscription), method: :delete do %>
+          <button class="btn btn-outline-primary modal-btns">Yes</button>
+        <% end %>
       </div>
     </div>
   </div>
