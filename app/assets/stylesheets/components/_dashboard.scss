@@ -45,8 +45,6 @@
 .fun-facts {
   display: flex;
   justify-content: space-around;
-  margin-left: 40px;
-  margin-right: 40px;
   margin-top: 20px;
  }
 
@@ -57,12 +55,13 @@
  }
 
 .fact-item {
-  width: 200px;
+  width: 240px;
   padding: 20px 20px;
   margin: 0px 10px;
   height: auto;
   border-radius: 8px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
  }
 
 .dashboard-elements {
@@ -75,7 +74,15 @@
   padding-bottom: 20px;
   border-bottom: solid 1px #e7e7e7;
   margin: 40px;
+ }
 
+ .fact-bubbles {
+  background-color: #7BA9DE;
+  color: white;
+  margin: 0px 65px;
+  margin-top: 10px;
+  padding: 20px 0px;
+  border-radius: 50%;
  }
 
 
