@@ -59,14 +59,14 @@
           <% end %>
         </div>
 
-    <div class="fact-item">
-      <p><strong>Average Monthly Spend: </strong> £85.30</p>
-    </div>
-  </div>
+        <div class="fact-item">
+          <p><strong>Average Monthly Spend: </strong> £85.30</p>
+        </div>
+      </div>
 
 
 
-      <div class="chart-container" style="width: 800px;">
+      <div class="chart-container">
         <div class="section-title"><h5>My Activity</h5></div>
         <canvas id="myChart"></canvas>
       </div>
@@ -74,48 +74,55 @@
 
     <!------- End of graph (fun-facts-and-graph-container) ---------->
 
-
-    <div class="subscriptions-container" style="width: 800px;">
-      <div class="section-title"><h5>My Subscriptions (<%=  @subscriptions.count %>)</h5>
-        <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription <i class="fas fa-plus"></i></button>
-      </div>
-      <div class="subscriptions-table-category-names">
-        <div>SERVICE</div>
-        <div>PRICE</div>
+    <div class="color-code-and-subscriptions-container">
+      <div class="color-code-container">
+        <div class="color-key-red">7 days to renewal (or less)</div>
+        <div class="color-key-yellow">14 days to renewal (or less)</div>
+        <div class="color-key-green">More than 14 days:</div>
       </div>
 
-      <% @subscriptions.each do |subscription| %>
-        <%= link_to subscription_path(subscription), style: 'text-decoration: none; margin: 0;' do %>
-          <div class="subscription-card zoom">
-            <div>
-              <% result = subscription.renewal_date - Date.today %>
-              <% days = result.to_i %>
-              <% if days < 7 %>
-                <div class="red-status"></div>
-              <% elsif days > 7 && days < 14 %>
-                <div class="yellow-status"></div>
-              <% else %>
-                <div class="green-status"></div>
-             <% end %>
+      <div class="subscriptions-container">
+        <div class="section-title"><h5>My Subscriptions (<%=  @subscriptions.count %>)</h5>
+          <button type="button" class="btn add-subscription-btn" data-toggle="modal" data-target="#myModal">Add a Subscription <i class="fas fa-plus"></i></button>
+        </div>
+        <div class="subscriptions-table-category-names">
+          <div>SERVICE</div>
+          <div>PRICE</div>
+        </div>
+
+        <% @subscriptions.each do |subscription| %>
+          <%= link_to subscription_path(subscription), style: 'text-decoration: none; margin: 0;' do %>
+            <div class="subscription-card zoom">
+              <div>
+                <% result = subscription.renewal_date - Date.today %>
+                <% days = result.to_i %>
+                <% if days < 7 %>
+                  <div class="red-status"></div>
+                <% elsif days > 7 && days < 14 %>
+                  <div class="yellow-status"></div>
+                <% else %>
+                  <div class="green-status"></div>
+               <% end %>
+              </div>
+              <div class="subscription-card-info">
+                <h2><%= subscription.title.capitalize %></h2>
+                <%# date1 = subscription.creation_date %>
+                <%# date2 = Date.today %>
+                <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+                <!-- <p>Total Spent: £ <%#= all_time_total = months * subscription.price %> </p> -->
+                <%# date1 = subscription.creation_date %>
+                <%# date2 = Date.today %>
+                <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+                <!-- <p> Time:<%#= months / 12 %> Years <%#= months % 12 %> Months </p> -->
+                <h3 class="card-trip-pricing">£<%= subscription.price %></h3>
+              </div>
+              <div>
+                <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
+              </div>
             </div>
-            <div class="subscription-card-info">
-              <h2><%= subscription.title.capitalize %></h2>
-              <%# date1 = subscription.creation_date %>
-              <%# date2 = Date.today %>
-              <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-              <!-- <p>Total Spent: £ <%#= all_time_total = months * subscription.price %> </p> -->
-              <%# date1 = subscription.creation_date %>
-              <%# date2 = Date.today %>
-              <%# months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-              <!-- <p> Time:<%#= months / 12 %> Years <%#= months % 12 %> Months </p> -->
-              <h3 class="card-trip-pricing">£<%= subscription.price %></h3>
-            </div>
-            <div>
-              <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
-            </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
