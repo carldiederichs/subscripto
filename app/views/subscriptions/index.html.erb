@@ -36,19 +36,19 @@
 <!------- Fun Facts ---------->
 
 
+  <div class="foo">
+    <span class="letter" data-letter="D">D</span>
+    <span class="letter" data-letter="A">A</span>
+    <span class="letter" data-letter="S">S</span>
+    <span class="letter" data-letter="H">H</span>
+    <span class="letter" data-letter="B">B</span>
+    <span class="letter" data-letter="O">O</span>
+    <span class="letter" data-letter="A">A</span>
+    <span class="letter" data-letter="R">R</span>
+    <span class="letter" data-letter="D">D</span>
+  </div>
   <div class="dashboard-elements">
     <div class="facts-and-graph-container">
-      <div class="foo">
-        <span class="letter" data-letter="D">D</span>
-        <span class="letter" data-letter="A">A</span>
-        <span class="letter" data-letter="S">S</span>
-        <span class="letter" data-letter="H">H</span>
-        <span class="letter" data-letter="B">B</span>
-        <span class="letter" data-letter="O">O</span>
-        <span class="letter" data-letter="A">A</span>
-        <span class="letter" data-letter="R">R</span>
-        <span class="letter" data-letter="D">D</span>
-      </div>
       <div class="fun-facts">
         <div class="fact-item" class="total-billing">
           <% subscriptions = Subscription.all %>
@@ -68,13 +68,17 @@
             <strong>Oldest Subscription: </strong>
           </div>
           <div>
-          <img src="https://logo.clearbit.com/<%= @subscriptions.order(creation_date: :asc).first.title.split(' ').first.downcase %>.com" class="oldest-subscription-fact">
-            <% oldest_subscription = @subscriptions.order(creation_date: :asc).first %>
-            <%= oldest_subscription.title %></div>
-            <% date1 = oldest_subscription.creation_date %>
-            <% date2 = Date.today %>
-            <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
-             <p>Total Spent: £<%= all_time_total = months * oldest_subscription.price %> </p>
+            <div class="d-flex align-items-center">
+              <img src="https://logo.clearbit.com/<%= @subscriptions.order(creation_date: :asc).first.title.split(' ').first.downcase %>.com" class="oldest-subscription-fact">
+              <div>
+                <% oldest_subscription = @subscriptions.order(creation_date: :asc).first %>
+                <p><%= oldest_subscription.title %></p></div>
+                <% date1 = oldest_subscription.creation_date %>
+                <% date2 = Date.today %>
+                <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+                <p>Total Spent: £<%= all_time_total = months * oldest_subscription.price %> </p>
+              </div>
+            </div>
           <% end %>
         </div>
 
@@ -102,39 +106,40 @@
         <div>SERVICE</div>
         <div>PRICE</div>
       </div>
-
-      <% @subscriptions.each do |subscription| %>
-        <%= link_to subscription_path(subscription), style: 'text-decoration: none; margin: 0;' do %>
-          <div class="subscription-card zoom">
-            <div>
-              <% result = subscription.renewal_date - Date.today %>
-              <% days = result.to_i %>
-              <% if days < 7 %>
-                <div class="red-status"></div>
-              <% elsif days > 7 && days < 14 %>
-                <div class="yellow-status"></div>
-              <% else %>
-                <div class="green-status"></div>
-             <% end %>
-            </div>
-            <div class="subscription-card-info">
-              <h2><%= subscription.title.capitalize %></h2>
-              <% if days < 7 %>
-              <h6 class="h6-expires-soon">renews soon</h6>
-              <% elsif days > 7 && days < 14 %>
-
-              <h6 class="h6-expires-soon">renews 1-2 weeks</h6>
-
-               <% end %>
-              <h3 class="card-trip-pricing">£<%= subscription.price %></h3>
-
+      <div class="subscriptions-holder">
+        <% @subscriptions.each do |subscription| %>
+          <%= link_to subscription_path(subscription), style: 'text-decoration: none; margin: 0;' do %>
+            <div class="subscription-card zoom">
               <div>
-                <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
+                <% result = subscription.renewal_date - Date.today %>
+                <% days = result.to_i %>
+                <% if days < 7 %>
+                  <div class="red-status"></div>
+                <% elsif days > 7 && days < 14 %>
+                  <div class="yellow-status"></div>
+                <% else %>
+                  <div class="green-status"></div>
+               <% end %>
+              </div>
+              <div class="subscription-card-info">
+                <h2><%= subscription.title.capitalize %></h2>
+                <% if days < 7 %>
+                <h6 class="h6-expires-soon">renews soon</h6>
+                <% elsif days > 7 && days < 14 %>
+
+                <h6 class="h6-expires-soon">renews 1-2 weeks</h6>
+
+                 <% end %>
+                <h3 class="card-trip-pricing">£<%= subscription.price %></h3>
+
+                <div>
+                  <img src="https://logo.clearbit.com/<%= subscription.title.split(' ').first.downcase %>.com" class="card-trip-user">
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
