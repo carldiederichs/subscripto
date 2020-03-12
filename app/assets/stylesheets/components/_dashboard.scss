@@ -80,13 +80,18 @@
   display: flex;
  }
 
+ // .strike-through {
+ //  display: flex;
+ //  bottom-border: solid 3px grey;
+ // }
+
  .dashboard-title {
   display: flex;
   justify-content: center;
   margin: 30px 30px 30px 30px;
   font-size: 30px;
   // font-weight: bolder;
-  font-family: montserrat;
+  font-family: nunito;
  }
 
  .fact-bubbles {
