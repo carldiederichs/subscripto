@@ -50,10 +50,24 @@
       <div class='show-card-body'>
     <img src="https://logo.clearbit.com/<%= @subscription.title.split(' ').first %>.com" class="show-title-logo">
         <div class="show-card-body-text">
+
           <p>Price Per Month: £<%= @subscription.price %></p>
+
           <p>Creation Date: <%= @subscription.creation_date %></p>
-          <p>Time Subscribed: </p>
-          <p>Total Spent: </p>
+
+          <% date1 = @subscription.creation_date %>
+          <% date2 = Date.today %>
+          <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+          <% if months % 12 == 0  %>
+            <p> Time Subscribed: <%= months / 12 %> Years</p>
+          <% else %>
+           <p> Time Subscribed: <%= months / 12 %> Years <%= months % 12 %> Months </p>
+          <% end %>
+
+          <% date1 = @subscription.creation_date %>
+          <% date2 = Date.today %>
+          <% months = (date2.year * 12 + date2.month) - (date1.year * 12 + date1.month) %>
+           <p>Total Spent: $<%= all_time_total = months * @subscription.price %> </p>
         </div>
       </div>
       <div class="show-card-footer">
