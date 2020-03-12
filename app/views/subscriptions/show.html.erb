@@ -94,10 +94,10 @@
       </div>
       <div class="modal-body">
         <%= link_to subscription_path(@subscription) do %>
-          <button class="btn btn-outline-primary modal-btns">No</button>
+          <button class="cancel-modal-btn">No</button>
         <% end %>
         <%= link_to subscription_path(@subscription), method: :delete do %>
-          <button class="btn btn-outline-primary modal-btns">Yes</button>
+          <button class="cancel-modal-btn">Yes</button>
         <% end %>
       </div>
     </div>
