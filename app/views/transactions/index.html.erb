@@ -34,28 +34,128 @@
 <main class="main">
     <div class="grid transactions-box">
       <div class="grid__column grid__column--is-twelve-columns transactions-box-inside">
-        <div id="app" class="connected-view">
-          <div class="item-overview">
+        <table id="transactions-table">
+          <tbody id="get-transactions-data">
+            <tr>
+              <td><i class="fas fa-flag red-flag"></i>Netflix.com</td>
+              <td>$ 8.99</td>
+              <td>2020-03-13</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>UBER</td>
+              <td>$ 29.48</td>
+              <td>2020-03-12</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag red-flag"></i>Spotify Finance Limited</td>
+              <td>$ 9.99</td>
+              <td>2020-03-09</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>United Airlines</td>
+              <td>$ 189.00</td>
+              <td>2020-03-07</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>Vito's Pizza</td>
+              <td>$ 14.52</td>
+              <td>2020-03-04</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>Deliveroo</td>
+              <td>$ 16.84</td>
+              <td>2020-03-01</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>Silver Lake Yoga</td>
+              <td>$ 25.00</td>
+              <td>2020-02-27</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>Liquid Juice Bar</td>
+              <td>$ 7.54</td>
+              <td>2020-02-24</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>Amazon.com</td>
+              <td>$ 71.60</td>
+              <td>2020-02-22</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag red-flag"></i>YouTube Premium</td>
+              <td>$  11.99</td>
+              <td>2020-02-21</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>LA Boulders</td>
+              <td>$ </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag red-flag"></i>Apple Music</td>
+              <td>$ </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>Pink's Hot Dogs</td>
+              <td>$ </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>UBER</td>
+              <td>$ </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag red-flag"></i>Netflix.com</td>
+              <td>$ 8.99</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>Yeastie Boys Bagels</td>
+              <td>$ </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>American Airlines</td>
+              <td>$ 213</td>
+              <td></td>
+            </tr>
+
+          </tbody>
+        </table>
+        <%= link_to "Import Subscriptions", subscriptions_path, class: 'back-to-homepage-button'%>
+        </div>
+      </div>
+    </div>
+  </main>
 
 
-          <div class="box">
-            <!-- <div class="box__heading">
-                <button id="get-transactions-btn" class="button button--is-small button--is-default button--is-full-width">Reveal Transactions</button>
-            </div> -->
 
-            <!--Transactions -->
-            <div class="item-data-row">
-              <div class="item-data-row__center">
-              </div>
-              <div class="item-data-row__response">
 
-                <script type="text/javascript">
+                <!-- <script type="text/javascript">
 
                (() => {var html = '<tr><td><strong>NAME</strong></td><td><strong>AMOUNT</strong></td><td><strong>DATE</strong></td></tr>';
                 [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].forEach(function(txn, idx) {
 
               if (idx === 0 ) {
-                html += '<tr>';
+                html = '<tr>';
                 html += '<td>' + '<i class="fas fa-flag red-flag"></i>' + 'Netflix.com' + '</td>';
                 html += '<td>$' + '8.99' + '</td>';
                 html += '<td>' + '2020-03-13' + '</td>';
@@ -110,7 +210,7 @@
                 html += '</tr>';
               }else if (idx === 9 ) {
                 html += '<tr>';
-                html += '<td>' + '<i class="fas fa-flag red-flag"></i>' +'The New York Times' + '</td>';
+                html += '<td>' + '<i class="fas fa-flag red-flag"></i>' +'Amazon Prime' + '</td>';
                 html += '<td>$' + '9.99' + '</td>';
                 html += '<td>' + '2020-02-21' + '</td>';
                 html += '</tr>';
@@ -165,10 +265,7 @@
               }
             })
           })()
-            </script>
-                <table id="transactions-table"><tbody id="get-transactions-data"></tbody></table>
-              </div>
-            </div>
+            </script> -->
 
             <!-- <div class="item-overview__column">
               <h3 class="item-overview__heading">Your item_id</h3>
@@ -360,13 +457,3 @@
                 <button id="get-accounts-btn" class="button button--is-small button--is-default button--is-full-width">Send request</button>
               </div> -->
 
-              <div class="item-data-row__response">
-                <table><tbody id="get-accounts-data"></tbody></table>
-                <%= link_to "Your Subscriptions", subscriptions_path, class: 'back-to-homepage-button'%>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
