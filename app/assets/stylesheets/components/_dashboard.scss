@@ -5,9 +5,11 @@
   padding: 30px 30px;
   border-radius: 8px;
   box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
-  margin: 40px 20px;
-    #myChart {
-    padding: 30px 30px;
+  margin: 20px 20px;
+    height: 467px;
+
+  #myChart {
+    padding: 13px 30px 30px 30px;
   }
 }
 
@@ -28,18 +30,20 @@
   display: flex;
   justify-content: space-between;
   color: black;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 .add-subscription-btn {
-  border: solid 1px #5f84b9;
-  background: #5f84b9;
+  background: #7BA9DE;
   color: white;
   border-radius: 7px;
   transition: 0.2s;
+  margin-bottom: 3px;
 }
 
 .add-subscription-btn:hover {
-  background-color: #234B8B;
+  background-color: #5f84b9;
   color: white;
 }
 
@@ -53,7 +57,7 @@
 
 .fun-facts {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 20px;
  }
 
@@ -64,7 +68,7 @@
  }
 
 .fact-item {
-  width: 240px;
+  width: 390px;
   padding: 20px 20px;
   margin: 0px 10px;
   height: auto;
@@ -80,18 +84,22 @@
  .dashboard-title {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
-  border-bottom: solid 1px #e7e7e7;
-  margin: 40px;
+  margin: 30px 30px 30px 30px;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: montserrat;
  }
 
  .fact-bubbles {
-  background-color: #7BA9DE;
-  color: white;
+  background-color: white;
+  color: #7BA9DE;
   margin: 0px 65px;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
   padding: 20px 0px;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 41px;
  }
 
 
@@ -141,8 +149,22 @@
   width: 60%;
 }
 
+.subscriptions-holder {
+  overflow-y: scroll;
+  height: 488px;
+  padding: 10px 10px;
+}
 
+.facts-and-graph-container {
+  margin: -20px 0px 20px -8px;
+}
 
+.price-title {
+  margin-right: 23px;
+}
 
+.service-title {
+  margin-left: 28px;
+}
 
 

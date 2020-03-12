@@ -10,9 +10,10 @@
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
-    margin: 20px 20px;
+    margin: 0px 10px 20px 0px;
     width: 100%;
-    margin-top: 50px;
+    height: 668px;
+    // margin-top: 50px;
 }
 
 .subscription-card {
@@ -34,7 +35,7 @@
 .card-trip-pricing {
   position: absolute;
   right: 16px;
-  top: 15px;
+  top: 26px;
   font-size: 16px;
   color: black;
 }
@@ -46,14 +47,11 @@
 }
 
 .subscription-card-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  background: white;
-  padding: 10px;
   color: black;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 10px;
 
   }
 
@@ -66,8 +64,8 @@
 
 .card-trip-user {
   position: absolute;
-  left: 16px;
-  top: 5px;
+  left: 20px;
+  top: 12px;
   width: 40px;
 }
 
@@ -136,6 +134,8 @@
 .subscriptions-table-category-names {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin-left: 20px;
+  margin-right: 10px;
+   margin: 20px 0px;
 }
 
