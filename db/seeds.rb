@@ -8,10 +8,22 @@
 puts 'Start seeding'
 puts 'Deleting old data...'
 Subscription.destroy_all
-user = User.all.last
+Company.destroy_all
+User.destroy_all
+
+user1 = User.create(email: "carl@gmail.com", password: "Carl1111")
+
+company1 = Company.create(name: "Netflix")
+company2 = Company.create(name: "Spotify")
+company3 = Company.create(name: "Hulu")
+company4 = Company.create(name: "Apple Music")
+company5 = Company.create(name: "Audible")
+company6 = Company.create(name: "Youtube Premium")
+company7 = Company.create(name: "GitHub")
+
 company = Company.all.last
 puts 'Creating subscriptions...'
-Subscription.create(user: user, company: company, title: 'Netflix', price: 8.99, renewal_date: Date.parse("2020/03/13"), creation_date: Date.today)
+Subscription.create(user: user1, company: company1, title: 'Netflix', price: 8.99, renewal_date: Date.parse("2020/03/13"), creation_date: Date.today)
 Subscription.create(user: user, company: company, title: 'Spotify', price: 9.99, renewal_date: Date.parse("2020/03/14"), creation_date: Date.today)
 Subscription.create(user: user, company: company, title: 'Hulu', price: 5.99, renewal_date: Date.parse("2020/03/21"), creation_date: Date.today)
 Subscription.create(user: user, company: company, title: 'Apple Music', price: 9.99, renewal_date: Date.parse("2020/04/1"), creation_date: Date.today)
@@ -19,3 +31,4 @@ Subscription.create(user: user, company: company, title: 'Audible', price: 8.99,
 Subscription.create(user: user, company: company, title: 'YouTube Premium', price: 4.99, renewal_date: Date.parse("2020/04/1"), creation_date: Date.today)
 Subscription.create(user: user, company: company, title: 'Github', price: 10.99, renewal_date: Date.parse("2020/04/3"), creation_date: Date.today)
 puts 'Seeding done'
+
