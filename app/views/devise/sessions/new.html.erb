@@ -1,3 +1,33 @@
+  <div>
+  <div class="navbar subscriptions-overview-navbar">
+  <%= link_to :root, class: 'navbar-brand' do %>
+    <%= image_tag "dark-logo.png", class: "subscriptions-overview-subscripto-logo" %>
+  <% end %>
+    <ul class='subscriptions-overview-underline-menu'>
+      <li class='nav-item subscriptions-overview-nav-item'>
+        <%= link_to 'Help', root_path, class: 'nav-link subscriptions-overview-nav-link'%>
+      </li>
+      <li class='nav-item subscriptions-overview-nav-item'>
+        <%= link_to 'Scan My Account', transactions_path, class: 'nav-link subscriptions-overview-nav-link'%>
+      </li>
+      <% if current_user.nil? %>
+        <li class='nav-item subscriptions-overview-nav-item'>
+          <%= link_to 'Sign up', '/users/sign_up', class: 'nav-link subscriptions-overview-nav-link' %>
+        </li>
+        <li class='nav-item subscriptions-overview-nav-item'>
+          <%= link_to 'Log in', new_user_session_path, class: 'nav-link subscriptions-overview-nav-link' %>
+        </li>
+      <% else %>
+        <li class='nav-item subscriptions-overview-nav-item'>
+          <%= link_to 'My Subscriptions', subscriptions_path, class: 'nav-link subscriptions-overview-nav-link' %>
+        </li>
+        <li class='nav-item subscriptions-overview-nav-item'>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link subscriptions-overview-nav-link' %>
+        </li>
+      <% end %>
+    </ul>
+    </div>
+
 <div class="container-of-containers">
 <div class="container" id="container">
   <div class="form-container sign-up-container">
@@ -73,14 +103,14 @@
         <button class="ghost" id="signIn">Sign In</button>
       </div>
       <div class="overlay-panel overlay-right">
-        <h1>Hello there!</h1>
-        <p>Start keeping track of your subscriptions right away</p>
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
         <button class="ghost" id="signUp">Sign Up</button>
       </div>
     </div>
   </div>
 </div>
 </div>
-<footer class="center">
+<!-- <footer class="center">
     <p>Subscripto &copy; 2020</p>
-  </footer>
+  </footer> -->
