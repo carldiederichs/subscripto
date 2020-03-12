@@ -13,7 +13,7 @@ company = Company.all.last
 puts 'Creating subscriptions...'
 Subscription.create(user: user, company: company, title: 'Netflix', price: 8.99, renewal_date: Date.parse("2020/03/13"), creation_date: Date.today)
 Subscription.create(user: user, company: company, title: 'Spotify', price: 9.99, renewal_date: Date.parse("2020/03/14"), creation_date: Date.today)
-Subscription.create(user: user, company: company, title: 'SoundCloud', price: 49.99, renewal_date: Date.parse("2020/03/21"), creation_date: Date.today)
+Subscription.create(user: user, company: company, title: 'Hulu', price: 49.99, renewal_date: Date.parse("2020/03/21"), creation_date: Date.today)
 Subscription.create(user: user, company: company, title: 'Apple Music', price: 9.99, renewal_date: Date.parse("2020/04/1"), creation_date: Date.today)
 Subscription.create(user: user, company: company, title: 'Audible', price: 8.99, renewal_date: Date.parse("2020/04/1"), creation_date: Date.today)
 Subscription.create(user: user, company: company, title: 'YouTube Premium', price: 4.99, renewal_date: Date.parse("2020/04/1"), creation_date: Date.today)
