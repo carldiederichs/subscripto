@@ -21,7 +21,7 @@ class TransactionsController < ApplicationController
     exchange_token_response =
     client.item.public_token.exchange(params['public_token'])
     @@access_token = exchange_token_response['access_token']
-    item_id = exchange_token_response['item_id']
+    @@item_id = exchange_token_response['item_id']
     pretty_print_response(exchange_token_response)
     # content_type :json
     t = exchange_token_response.to_json
