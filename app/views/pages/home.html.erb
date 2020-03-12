@@ -12,7 +12,8 @@
         <li class='nav-item home-nav-item'>
           <%= link_to 'Help', root_path, class: 'nav-link home-nav-link'%>
         </li>
-        <li class='nav-item home-nav-item' id="test">
+        <!-- <li class='nav-item home-nav-item' id="test"> -->
+        <li class='nav-item home-nav-item' id="test2">
           <%= link_to 'Scan My Account', "#", class: 'nav-link home-nav-link'%>
         </li>
         <% if current_user.nil? %>
@@ -54,9 +55,12 @@
       </div>
       </div>
     <div class='button-box'>
-      <%= link_to subscriptions_path do %>
-        <button class='btn btn-primary' type="submit" id='button-homepage'>Get Started</button>
-      <% end %>
+
+      <%= link_to 'Find My Subscriptions', "#", class: 'btn btn-primary button-homepage', id: 'test' %>
+      <%#= link_to transactions_path, class: do %>
+       <!--  <button class='btn btn-primary' type="submit" id='test'>Find My Subscriptions</button> -->
+        <!-- <button class='btn btn-primary' type="submit" id='button-homepage test'>Find My Subscriptions</button>
+      <#% end %> -->
     </div>
     </div>
     <footer class="footer-text-center">
@@ -203,7 +207,7 @@
           $.post('/get_access_token', {
             public_token: public_token
           }, function(data) {
-            console.log("Hello", data)
+            console.log( data)
             $('#container').fadeOut('fast', function() {
               $('#item_id').text(data.item_id);
               $('#access_token').text(data.access_token);
