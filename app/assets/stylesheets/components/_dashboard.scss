@@ -8,8 +8,8 @@
   margin: 20px 20px;
     height: 467px;
 
-    #myChart {
-    padding: 30px 30px;
+  #myChart {
+    padding: 13px 30px 30px 30px;
   }
 }
 
@@ -90,17 +90,15 @@
  }
 
  .fact-bubbles {
-    background-color: #7BA9DE;
-    color: white;
-    margin: 0px 65px;
-    margin: 10px auto 0 auto;
-    padding: 20px 0px;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: white;
+  color: #7BA9DE;
+  margin: 0px 65px;
+  margin: 10px auto 0 auto;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 41px;
  }
 
 
