@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   min-height: 87vh;
+  min-width: 100%;
 }
 
 h1 {
@@ -110,7 +111,7 @@ button.ghost {
   position: relative;
   overflow: hidden;
   width: 1000px;
-  max-width: 50%;
+  // max-width: 50%;
   min-height: 600px;
 }
 
