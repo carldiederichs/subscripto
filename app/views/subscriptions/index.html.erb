@@ -36,7 +36,7 @@
 <!------- Fun Facts ---------->
 
   <div class='dashboard-title'>
-    <div class="strike-through"></div> <strong>DASHBOARD</strong> <div class="strike-through"></div>
+    DASHBOARD
   </div>
   <div class="dashboard-elements">
     <div class="facts-and-graph-container">
@@ -47,12 +47,12 @@
           <% s.price %>
           <% end %>
           <% total = price_array.sum %>
-          <strong>Next Month Bill: </strong>
+          <p>Next Month Bill:</p>
           <div class="fact-bubbles">$<%=total.round(2)%></div>
         </div>
 
         <div class="fact-item">
-          <p><strong>Average Monthly Spend: </strong></p>
+          <p>Average Monthly Spend: </p>
           <div class="fact-bubbles">$85.30</div>
         </div>
       </div>
