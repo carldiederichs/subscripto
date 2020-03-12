@@ -34,113 +34,198 @@
 <main class="main">
     <div class="grid transactions-box">
       <div class="grid__column grid__column--is-twelve-columns transactions-box-inside">
+        <div class="transactions-header">
+          <h2 class='transactions-title'>TRANSACTIONS</h2>
+            <%= link_to subscriptions_path, class:'import-subscriptions-button-link'  do %>
+              Import Subscriptions
+            <% end %>
+        </div>
         <table id="transactions-table">
+
           <tbody id="get-transactions-data">
             <tr>
               <td><i class="fas fa-flag red-flag"></i>Netflix.com</td>
               <td>$ 8.99</td>
-              <td>2020-03-13</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-03-13
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>UBER</td>
               <td>$ 29.48</td>
-              <td>2020-03-12</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-03-12
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag red-flag"></i>Spotify Finance Limited</td>
               <td>$ 9.99</td>
-              <td>2020-03-09</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-03-09
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>United Airlines</td>
               <td>$ 189.00</td>
-              <td>2020-03-07</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-03-07
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>Vito's Pizza</td>
               <td>$ 14.52</td>
-              <td>2020-03-04</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-03-04
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>Deliveroo</td>
               <td>$ 16.84</td>
-              <td>2020-03-01</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-03-01
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag red-flag"></i>GitHub</td>
+              <td>$ 7.00</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-29
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>Silver Lake Yoga</td>
               <td>$ 25.00</td>
-              <td>2020-02-27</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-27
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>Liquid Juice Bar</td>
               <td>$ 7.54</td>
-              <td>2020-02-24</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-24
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>Amazon.com</td>
               <td>$ 71.60</td>
-              <td>2020-02-22</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-22
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag red-flag"></i>YouTube Premium</td>
               <td>$  11.99</td>
-              <td>2020-02-21</td>
-            </tr>
-
-            <tr>
-              <td><i class="fas fa-flag transparent-flag"></i>LA Boulders</td>
-              <td>$ </td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td><i class="fas fa-flag red-flag"></i>Apple Music</td>
-              <td>$ </td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td><i class="fas fa-flag transparent-flag"></i>Pink's Hot Dogs</td>
-              <td>$ </td>
-              <td></td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-21
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>UBER</td>
-              <td>$ </td>
-              <td></td>
+              <td>$ 26.44</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-18
+                </div>
+              </td>
             </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>LA Boulders</td>
+              <td>$ 64.50</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-18
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag red-flag"></i>Apple Music</td>
+              <td>$ 9.99</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-16
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-flag transparent-flag"></i>Pink's Hot Dogs</td>
+              <td>$ 8.63</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-15
+                </div>
+              </td>
+            </tr>
+
 
             <tr>
               <td><i class="fas fa-flag red-flag"></i>Netflix.com</td>
               <td>$ 8.99</td>
-              <td></td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-13
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>Yeastie Boys Bagels</td>
-              <td>$ </td>
-              <td></td>
+              <td>$ 7.33</td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-11
+                </div>
+              </td>
             </tr>
 
             <tr>
               <td><i class="fas fa-flag transparent-flag"></i>American Airlines</td>
               <td>$ 213</td>
-              <td></td>
+              <td class="dates-right">
+                <div class="">
+                   2020-02-10
+                </div>
+              </td>
             </tr>
 
           </tbody>
         </table>
-        <%= link_to "Import Subscriptions", subscriptions_path, class: 'back-to-homepage-button'%>
         </div>
       </div>
     </div>

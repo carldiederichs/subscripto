@@ -101,6 +101,10 @@ Content at the top of the view
   color: black;
 }
 
+table {
+  margin: 25px 0px;
+}
+
 /*
 
 Item overview
@@ -200,6 +204,7 @@ Display content inside of box
   text-transform: capitalize;
   font-weight: normal;
   width: 175px;
+
 }
 
 #transactions-table {
@@ -212,12 +217,11 @@ Display content inside of box
   border-color: #4b74b0;
 }
 
-.back-to-homepage-button {
+.import-subscriptions-button-link {
+  text-decoration: none;
   letter-spacing: normal;
   border: solid 1px black;
   margin-top: 8px;
-  margin-bottom: 8px !important;
-  margin-left: 15px;
   font-size: 14px;
   border-radius: 7px;
   padding: 11px 15px;
@@ -229,16 +233,15 @@ Display content inside of box
   transition: 0.3s;
   text-transform: capitalize;
   font-weight: normal;
-  margin-bottom: 20px;
-  width: 175px;
-  text-decoration: none;
-}
+  height: 46px;
+  margin-right: 7px;
 
-.back-to-homepage-button:hover {
-  color: black;
-  border-color: black;
-  background-color: white;
-  text-decoration: none;
+  &:hover {
+    color: black;
+    border-color: black;
+    text-decoration: none;
+    background-color: white;
+  }
 }
 
 .transactions-banner-image {
@@ -255,7 +258,26 @@ Display content inside of box
 }
 
 .transactions-box-inside {
-  padding: 0px 20px 20px 20px;
+  padding: 0px 50px 25px 50px;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+
+  .transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+
+  }
+
+  h2{
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight:bold;
+    font-family: 'Montserrat';
+    margin-left: 0px;
+  }
 }
 
 /*
@@ -338,6 +360,14 @@ Item row
 .transparent-flag {
   color: transparent;
   margin-right: 10px;
+}
+
+.dates-right {
+  display: flex;
+  justify-content: flex-end;
+  div {
+    width: 100px;
+  }
 }
 
 /*
