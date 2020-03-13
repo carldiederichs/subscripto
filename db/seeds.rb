@@ -11,17 +11,17 @@ Subscription.destroy_all
 Company.destroy_all
 User.destroy_all
 
-user = User.create(email: "carl@gmail.com", password: "Carl1111")
+user = User.create(email: "zach@gmail.com", password: "123456")
 
 company1 = Company.create(name: "Netflix")
 company2 = Company.create(name: "Spotify")
 company3 = Company.create(name: "Hulu")
-company4 = Company.create(name: "Apple Music")
+company4 = Company.create(name: "Apple")
 company5 = Company.create(name: "Audible")
-company6 = Company.create(name: "Youtube Premium")
+company6 = Company.create(name: "YouTube")
 company7 = Company.create(name: "GitHub")
 
-company = Company.all.last
+# company = Company.all.last
 puts 'Creating subscriptions...'
 Subscription.create(user: user, company: company1, title: 'Netflix', price: 8.99, renewal_date: Date.parse("2020/03/13"), creation_date: Date.today)
 Subscription.create(user: user, company: company2, title: 'Spotify', price: 9.99, renewal_date: Date.parse("2020/03/14"), creation_date: Date.today)
