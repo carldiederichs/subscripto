@@ -11,7 +11,7 @@ Subscription.destroy_all
 Company.destroy_all
 User.destroy_all
 
-user = User.create(email: "zach@gmail.com", password: "123456")
+user = User.create(email: "zach@gmail.com", password: "louis11")
 
 company1 = Company.create(name: "Netflix")
 company2 = Company.create(name: "Spotify")
