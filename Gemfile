@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
-ruby '2.6.10'
+ruby '3.2.0'
 
+
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 gem 'plaid'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
-gem 'pg', '~> 0.21'
+gem 'pg', '>= 0.21'
 gem 'puma'
 gem 'rails', '6.0.2.1'
 gem 'redis'
