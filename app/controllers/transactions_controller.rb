@@ -44,7 +44,7 @@ class TransactionsController < ApplicationController
         client.transactions.get(@@access_token, thirty_days_ago, now)
       pretty_print_response(product_response)
       render json: { transactions: product_response }.to_json
-    rescue Plaid::PlaidAPIError => e
+    rescue Plaid::PlaidError => e
       error_response = format_error(e)
       pretty_print_response(error_response)
       content_type :json
