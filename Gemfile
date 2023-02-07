@@ -13,6 +13,8 @@ gem 'puma'
 gem 'rails', '7.0.4.2'
 gem 'redis'
 gem 'nokogiri', force_ruby_platform: true
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sass-rails', '~> 6.0.0'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
